@@ -1149,12 +1149,12 @@ namespace ObsidianSailboat
         {
             bool show_help = false;
             var homedir = Environment.GetEnvironmentVariable("HOME");
-            if !(Directory.Exists(String.Format($"{homedir}/.osail"))) {
+            if (!Directory.Exists(String.Format($"{homedir}/.osail"))) {
                 Console.WriteLine($"directory {homedir}/.osail doesn't exist, creating");
                 Directory.CreateDirectory($"{homedir}/.osail");
             }
             string configfile = String.Format($"{homedir}/.osail/config.toml");
-            if !(File.Exists(configfile)) {
+            if (!File.Exists(configfile)) {
                 Console.WriteLine($"file {configfile} doesn't exist, copying from .");
                 File.Copy("config.toml", configfile);
             }   
