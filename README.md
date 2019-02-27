@@ -6,6 +6,12 @@ A tool that integrates a bunch of NSE scripts together to build a picture of a h
 
 This is designed to couple to tools like recon-ng, SET, metasploit, and w3af for discovery, mapping, and footprinting. 
 
+# building
+
+use the [dotnet core](https://docs.microsoft.com/en-us/dotnet/core/tools/index?tabs=netcore2x):
+
+    $ dotnet run
+
 # example session
 
 	[+] ObsidianSailboat starting up ...
