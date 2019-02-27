@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <RuntimeIdentifiers>win10-x64;osx.10.12-x64;debian.8-x64</RuntimeIdentifiers>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="dotNetRDF" Version="2.0.1" />
+    <PackageReference Include="ncmd" Version="1.0.3" />
+    <PackageReference Include="NDesk.Options.Redpoint" Version="0.2.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="toml-net" Version="0.1.1.35632" />
+  </ItemGroup>
+
+</Project>
