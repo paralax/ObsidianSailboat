@@ -24,7 +24,7 @@ using VDS.RDF.Writing;
 using VDS.RDF.Writing.Formatting;
 
 
-namespace ObsidianSailboat.Net
+namespace ObsidianSailboat
 {
     public class NseWriter {
         public void WriteColor(ConsoleColor color, string arg) {

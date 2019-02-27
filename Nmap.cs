@@ -4,7 +4,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Text.RegularExpressions;
 
-namespace ObsidianSailboat.Net  
+namespace ObsidianSailboat
 {
     class NmapOption 
     {
