@@ -1149,11 +1149,19 @@ namespace ObsidianSailboat.Net
         {
             bool show_help = false;
             var homedir = Environment.GetEnvironmentVariable("HOME");
+            if !(Directory.Exists(String.Format($"{homedir}/.osail"))) {
+                Console.WriteLine($"directory {homedir}/.osail doesn't exist, creating");
+                Directory.CreateDirectory($"{homedir}/.osail");
+            }
             string configfile = String.Format($"{homedir}/.osail/config.toml");
+            if !(File.Exists(configfile)) {
+                Console.WriteLine($"file {configfile} doesn't exist, copying from .");
+                File.Copy("config.toml", configfile);
+            }   
             string script = null;
             string workspace = "default";
-            string nmap = "/Users/jose/Downloads/nmap/nmap";
-            string nsepath = "/Users/jose/Downloads/nmap/scripts";
+            string nmap = "/usr/bin/nmap";
+            string nsepath = "/usr/share/nmap/scripts";
             var nw = new NseWriter();
             nw.Info("Obsidian Sailboat is starting up ...");
             // http://tirania.org/blog/archive/2008/Oct-14.html
