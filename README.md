@@ -29,7 +29,7 @@ This is designed to couple to tools like recon-ng, SET, metasploit, and w3af for
 	osail default(tcp-service-discovery)> unset RPORT
 	osail default(tcp-service-discovery)> show info
 	      Name: tcp-service-discovery
-	    Module: ../../../Downloads/nmap/nmap
+	    Module: /usr/bin/nmap
 	 Author(s): Fyodor
 	   License: Nmap--See https://nmap.org/book/man-legal.html
 	Categories: default, safe, version, discovery
@@ -45,7 +45,7 @@ This is designed to couple to tools like recon-ng, SET, metasploit, and w3af for
 	 Probe open ports to determine service/version info
 
 	osail default(tcp-service-discovery)> run
-	[*] ../../../Downloads/nmap/nmap  -sV -A -oX - --version-intensity=2 --host-timeout=10 --dns-servers=8.8.8.8 --max-retries=10 --max-scan-delay=0 --min-parallelism=1 --scan-delay=0 --max-parallelism=100 159.89.225.14
+	[*] /usr/bin/nmap  -sV -A -oX - --version-intensity=2 --host-timeout=10 --dns-servers=8.8.8.8 --max-retries=10 --max-scan-delay=0 --min-parallelism=1 --scan-delay=0 --max-parallelism=100 159.89.225.14
 
 	[+] Nmap done at Sat Mar 17 01:08:13 2018; 1 IP address (1 host up) scanned in 7.85 seconds
 	[+] 159.89.225.14
@@ -178,7 +178,7 @@ This is designed to couple to tools like recon-ng, SET, metasploit, and w3af for
 	osail default(tcp-service-discovery)> use exploit/ftp/vsftpd-backdoor
 	osail vuln(ftp-vsftpd-backdoor)> show info
 	      Name: ftp-vsftpd-backdoor
-	    Module: /Users/jose/Downloads/nmap/scripts/ftp-vsftpd-backdoor.nse
+	    Module: /usr/share/nmap/scripts/ftp-vsftpd-backdoor.nse
 	 Author(s): Daniel Miller
 	   License: Same as Nmap--See https://nmap.org/book/man-legal.html
 	Categories: vuln, malware, intrusive, exploit
@@ -205,7 +205,7 @@ This is designed to couple to tools like recon-ng, SET, metasploit, and w3af for
 	osail vuln(ftp-vsftpd-backdoor)> set RPORT 21
 	osail vuln(ftp-vsftpd-backdoor)> set ftp-vsftpd-backdoor.cmd ls
 	osail vuln(ftp-vsftpd-backdoor)> run
-	[*] ../../../Downloads/nmap/nmap -p 21 -A -oX - --script ftp-vsftpd-backdoor --script-args "ftp-vsftpd-backdoor.cmd=ls" --host-timeout=10 --dns-servers=8.8.8.8 --max-retries=10 --max-scan-delay=0 --min-parallelism=1 --scan-delay=0 --max-parallelism=100 159.89.225.14
+	[*] /usr/bin/nmap -p 21 -A -oX - --script ftp-vsftpd-backdoor --script-args "ftp-vsftpd-backdoor.cmd=ls" --host-timeout=10 --dns-servers=8.8.8.8 --max-retries=10 --max-scan-delay=0 --min-parallelism=1 --scan-delay=0 --max-parallelism=100 159.89.225.14
 	[+] Nmap done at Sat Mar 17 01:09:47 2018; 1 IP address (1 host up) scanned in 0.90 seconds
 	[+] 159.89.225.14
 	osail vuln(ftp-vsftpd-backdoor)> hosts 159.89.225.14
@@ -301,7 +301,7 @@ This is designed to couple to tools like recon-ng, SET, metasploit, and w3af for
 	osail vuln(ftp-vsftpd-backdoor)> use auth/ssh/auth-methods
 	osail intrusive(ssh-auth-methods)> use auth/set RHOST  159.89.225.14
 	osail intrusive(ssh-auth-methods)> run
-	[*] ../../../Downloads/nmap/nmap -p 22 -A -oX - --script ssh-auth-methods --script-args "" --host-timeout=10 --dns-servers=8.8.8.8 --max-retries=10 --max-scan-delay=0 --min-parallelism=1 --scan-delay=0 --max-parallelism=100 159.89.225.14
+	[*] /usr/bin/nmap -p 22 -A -oX - --script ssh-auth-methods --script-args "" --host-timeout=10 --dns-servers=8.8.8.8 --max-retries=10 --max-scan-delay=0 --min-parallelism=1 --scan-delay=0 --max-parallelism=100 159.89.225.14
 	[+] Nmap done at Sat Mar 17 01:10:51 2018; 1 IP address (1 host up) scanned in 1.26 seconds
 	[+] 159.89.225.14
 	[+]
@@ -311,7 +311,7 @@ This is designed to couple to tools like recon-ng, SET, metasploit, and w3af for
 	osail intrusive(ssh-auth-methods)> use safe/ssh2-enum-algos
 	osail safe(ssh2-enum-algos)> use safe/set RHOST  159.89.225.14
 	osail safe(ssh2-enum-algos)> run
-	[*] ../../../Downloads/nmap/nmap -p 22 -A -oX - --script ssh2-enum-algos --script-args "" --host-timeout=10 --dns-servers=8.8.8.8 --max-retries=10 --max-scan-delay=0 --min-parallelism=1 --scan-delay=0 --max-parallelism=100 159.89.225.14
+	[*] /usr/bin/nmap -p 22 -A -oX - --script ssh2-enum-algos --script-args "" --host-timeout=10 --dns-servers=8.8.8.8 --max-retries=10 --max-scan-delay=0 --min-parallelism=1 --scan-delay=0 --max-parallelism=100 159.89.225.14
 	[+] Nmap done at Sat Mar 17 01:11:06 2018; 1 IP address (1 host up) scanned in 1.08 seconds
 	[+] 159.89.225.14
 	[+]
@@ -349,7 +349,7 @@ This is designed to couple to tools like recon-ng, SET, metasploit, and w3af for
 	  compression_algorithms: (2)
 	      none
 	      zlib@openssh.com
-	osail safe(ssh2-enum-algos)> hosts safhosts 159.89.225.14
+	osail safe(ssh2-enum-algos)> hosts 159.89.225.14
 	    Host                 Hostname
 	    ----                 --------
 	    159.89.225.14
@@ -505,14 +505,14 @@ This is designed to couple to tools like recon-ng, SET, metasploit, and w3af for
 	osail safe(ssh2-enum-algos)> use safe/hostmap/robtex
 	osail safe(hostmap-robtex)> use safe/set RHOST  159.89.225.14
 	osail safe(hostmap-robtex)> run
-	[*] ../../../Downloads/nmap/nmap -p 80 -A -oX - --script hostmap-robtex --script-args "" --host-timeout=10 --dns-servers=8.8.8.8 --max-retries=10 --max-scan-delay=0 --min-parallelism=1 --scan-delay=0 --max-parallelism=100 159.89.225.14
+	[*] /usr/bin/nmap -p 80 -A -oX - --script hostmap-robtex --script-args "" --host-timeout=10 --dns-servers=8.8.8.8 --max-retries=10 --max-scan-delay=0 --min-parallelism=1 --scan-delay=0 --max-parallelism=100 159.89.225.14
 	[+] Nmap done at Sat Mar 17 01:12:03 2018; 1 IP address (1 host up) scanned in 1.45 seconds
 	[+] 159.89.225.14
 	[+] ERROR: Script execution failed (use -d to debug)
 	osail safe(hostmap-robtex)> use discovery/resolveall
-	osail safe(resolveall)> use discoset RHOST  159.89.225.14
+	osail safe(resolveall)> set RHOST  159.89.225.14
 	osail safe(resolveall)> run
-	[*] ../../../Downloads/nmap/nmap -p 80 -A -oX - --script resolveall --script-args "" --host-timeout=10 --dns-servers=8.8.8.8 --max-retries=10 --max-scan-delay=0 --min-parallelism=1 --scan-delay=0 --max-parallelism=100 159.89.225.14
+	[*] /usr/bin/nmap -p 80 -A -oX - --script resolveall --script-args "" --host-timeout=10 --dns-servers=8.8.8.8 --max-retries=10 --max-scan-delay=0 --min-parallelism=1 --scan-delay=0 --max-parallelism=100 159.89.225.14
 	[+] Nmap done at Sat Mar 17 01:12:18 2018; 1 IP address (1 host up) scanned in 0.86 seconds
 	[+] 159.89.225.14
 	osail safe(resolveall)> hosts 159.89.225.14
