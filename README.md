@@ -8,7 +8,11 @@ This is designed to couple to tools like recon-ng, SET, metasploit, and w3af for
 
 # building
 
-use the [dotnet core](https://docs.microsoft.com/en-us/dotnet/core/tools/index?tabs=netcore2x):
+To install dependencies and build use [dotnet core](https://docs.microsoft.com/en-us/dotnet/core/tools/index?tabs=netcore2x) and run:
+
+    $ dotnet restore
+
+To run use:
 
     $ dotnet run
 
