@@ -6,7 +6,15 @@ A tool that integrates a bunch of NSE scripts together to build a picture of a h
 
 This is designed to couple to tools like recon-ng, SET, metasploit, and w3af for discovery, mapping, and footprinting. 
 
+# requirements
+
+Because ObsidianSailboat wraps [Nmap](https://nmap.org/), you must have Nmap installed. You can see more about the large body of NSE scripts available at the [NSEDoc](https://nmap.org/nsedoc/) site. 
+
+Optionally you can install [Masscan](https://github.com/robertdavidgraham/masscan) for high throughput wide area host discovery. I use this when doing host enumeration, for instance. 
+
 # preparing and installing
+
+I run OSail on Kali Linux, which has Nmap and Masscan installed. 
 
 You'll have to install the dotnet core, and while we're at it we'll install `aptitude` as well. You have to add a couple of dependencies, add the MS repo info, and then install the dotnet-sdk package:
 
