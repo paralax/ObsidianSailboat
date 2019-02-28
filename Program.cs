@@ -1262,6 +1262,13 @@ namespace ObsidianSailboat
             SctpCookieEcho.flags.Add("-sZ");
             SctpCookieEcho.categories = new string[]{"default", "safe", "discovery"};
 
+	    var Masscan = new Nmap(C.options.masscan);
+	    Masscan.name = "masscan-discovery";
+	    Masscan.path = C.options.masscan;
+	    Masscan.description = "Host discovery using masscan, far more efficient for wide area service discovery than nmap.";
+	    Masscan.flags.Remove("-R");
+	    Masscan.categories = new string[]{"default", "discovery"};
+
             var nseshell = new NseShell(nmap, nsepath, workspace);
             nseshell.modules.Add("discovery/tcp/connect", TcpConnect);
             nseshell.modules.Add("discovery/tcp/syn", TcpSYN);
@@ -1270,6 +1277,7 @@ namespace ObsidianSailboat
             nseshell.modules.Add("discovery/sctp/sctp-cookie-echo", SctpCookieEcho);
             nseshell.modules.Add("discovery/udp/scan", UdpScan);
             nseshell.modules.Add("discovery/ping/host-discovery", DiscoveryScan);
+	    nseshell.modules.Add("discovery/tcp/masscan-discovery", Masscan);
 
             //TcpConnect.Set_opt("RHOST", "195.22.127.231");
             //TcpConnect.Run(nseshell.global_options, new List<string>());
