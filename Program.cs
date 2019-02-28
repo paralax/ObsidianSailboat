@@ -150,13 +150,15 @@ namespace ObsidianSailboat
 
         private void BuildModules() {
             this.nw.Info("Building modules ...");
-            var files = Directory.GetFiles(this.nse_dir, "*.nse");
-            foreach (string file in files) {
-                Nmap nse = new Nmap(this.nmap_path, file);
-                foreach (string name in nse.Name_Branch()) {
-                    this.nw.Info($"Adding {file} as {name}");
-                    this.modules.Add(name, nse);
-                }
+	    foreach (string nse_dir in this.nse_dir.Split(',')) {
+                var files = Directory.GetFiles(nse_dir, "*.nse");
+                foreach (string file in files) {
+                    Nmap nse = new Nmap(this.nmap_path, file);
+                    foreach (string name in nse.Name_Branch()) {
+                        this.nw.Info($"Adding {file} as {name}");
+                        this.modules.Add(name, nse);
+                    } 
+		}
             }
             this.nw.Info("Done.");
         }
