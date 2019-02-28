@@ -1200,6 +1200,10 @@ namespace ObsidianSailboat
 
             var C = File.ReadAllText(configfile).ParseAsToml();;
             nmap = C.options.nmap;
+	    if (!File.Exists(nmap)) {
+		Console.WriteLine($"Fatal: Can't find {nmap}");
+		return;
+	    }
             nsepath = C.options.nsepath;
             workspace = C.options.workspace;
 
