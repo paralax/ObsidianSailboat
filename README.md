@@ -6,6 +6,19 @@ A tool that integrates a bunch of NSE scripts together to build a picture of a h
 
 This is designed to couple to tools like recon-ng, SET, metasploit, and w3af for discovery, mapping, and footprinting. 
 
+# preparing and installing
+
+You'll have to install the dotnet core, and while we're at it we'll install `aptitude` as well:
+
+	$ wget http://mirrors.edge.kernel.org/ubuntu/pool/main/i/icu/libicu60_60.2-6ubuntu1_amd64.deb
+	$ sudo dpkg -i libicu60_60.2-6ubuntu1_amd64.deb
+	$ wget http://mirrors.edge.kernel.org/ubuntu/pool/main/o/openssl/libssl1.0.0_1.0.2g-1ubuntu4_amd64.deb
+	$ sudo dpkg -i libssl1.0.0_1.0.2g-1ubuntu4_amd64.deb
+	$ wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb
+	$ sudo dpkg -i packages-microsoft-prod.deb
+	$ sudo apt-get install aptitude
+	$ sudo aptitude install dotnet-sdk-2.2
+
 # building
 
 To install dependencies and build use [dotnet core](https://docs.microsoft.com/en-us/dotnet/core/tools/index?tabs=netcore2x) and run:
