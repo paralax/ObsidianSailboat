@@ -1152,6 +1152,11 @@ namespace ObsidianSailboat
             if (!Directory.Exists(String.Format($"{homedir}/.osail"))) {
                 Console.WriteLine($"directory {homedir}/.osail doesn't exist, creating");
                 Directory.CreateDirectory($"{homedir}/.osail");
+                Directory.CreateDirectory($"{homedir}/.osail/data");
+		File.Copy("blank.rdf", $"{homedir}/.osail/data/graph.rdf");
+                Directory.CreateDirectory($"{homedir}/.osail/workspaces");
+                Directory.CreateDirectory($"{homedir}/.osail/workspaces/default");
+		File.Copy("blank.rdf", $"{homedir}/.osail/workspaces/default/graph.rdf");
             }
             string configfile = String.Format($"{homedir}/.osail/config.toml");
             if (!File.Exists(configfile)) {
