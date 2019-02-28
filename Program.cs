@@ -148,6 +148,12 @@ namespace ObsidianSailboat
                 var files = Directory.GetFiles(nse_dir, "*.nse");
                 foreach (string file in files) {
                     Nmap nse = new Nmap(this.nmap_path, file);
+		    if (Array.IndexOf(nse.categories, "external") > -1) {
+			nse.flags.Add("-sn");
+			nse.flags.Add("-Pn");
+			nse.flags.Add("-n");
+			nse.args.Remove("RPORT");
+		    }
                     foreach (string name in nse.Name_Branch()) {
                         this.nw.Info($"Adding {file} as {name}");
                         this.modules.Add(name, nse);
