@@ -71,16 +71,10 @@ namespace ObsidianSailboat
             this.nw = new NseWriter();
             this.BuildModules();
             this.global_options = new Dictionary<string, NmapOption>();
-            this.global_options.Add("--dns-servers", new NmapOption("8.8.8.8", "Specify custom DNS servers"));
             this.global_options.Add("--exclude", new NmapOption("", "Exclude hosts/networks"));
             this.global_options.Add("--excludefile", new NmapOption("", "Exclude list from file"));
             this.global_options.Add("--exclude-ports", new NmapOption("", "Exclude the specified ports from scanning"));
-            this.global_options.Add("--min-parallelism", new NmapOption("4", "Probe parallelization minimum"));
-            this.global_options.Add("--max-parallelism", new NmapOption("100", "Probe parallelization maximum"));
-            this.global_options.Add("--max-retries", new NmapOption("10", "Caps number of port scan probe retransmissions"));
-            this.global_options.Add("--host-timeout", new NmapOption("30", "Give up on target after this long"));
             this.global_options.Add("--scan-delay", new NmapOption("", "Adjust delay between probes"));
-            this.global_options.Add("--max-scan-delay", new NmapOption("0", "Adjust delay between probes"));
             this.graph = new Graph(); 
             this.graph.NamespaceMap.AddNamespace("net", new Uri("http://example.com/schema/1/net#"));
             this.graph.NamespaceMap.AddNamespace("vuln", new Uri("http://example.com/schema/1/vuln#"));
@@ -307,7 +301,13 @@ namespace ObsidianSailboat
                     this.Add_Triple(thishost, netHasFinding, thisfinding);
                 }
             }
-            this.nw.Info(nmap_xml.Root.Element("runstats").Element("finished").Attribute("summary").Value);
+	    try {
+                this.nw.Info(nmap_xml.Root.Element("runstats").Element("finished").Attribute("summary").Value);
+	    }
+	    catch {
+		// Masscan doesn't quite do Nmap XML run for runstats
+		this.nw.Info("Completed, took " + nmap_xml.Root.Element("runstats").Element("finished").Attribute("elapsed").Value + " seconds");
+	    }
             // https://bitbucket.org/dotnetrdf/dotnetrdf/wiki/UserGuide/Writing%20RDF
             RdfXmlWriter rdfxmlwriter = new RdfXmlWriter();
             rdfxmlwriter.Save(this.graph, this.graph_file);
@@ -1262,6 +1262,19 @@ namespace ObsidianSailboat
             SctpCookieEcho.flags.Add("-sZ");
             SctpCookieEcho.categories = new string[]{"default", "safe", "discovery"};
 
+	    var Masscan = new Nmap(C.options.masscan);
+	    Masscan.name = "masscan-discovery";
+	    Masscan.path = C.options.masscan;
+	    Masscan.description = "Host discovery using masscan, far more efficient for wide area service discovery than nmap.";
+	    Masscan.flags.Remove("-R");
+	    Masscan.args.Remove("--dns-servers");
+	    Masscan.args.Remove("--min-parallelism");
+	    Masscan.args.Remove("--max-parallelism");
+	    Masscan.args.Remove("--max-retries");
+	    Masscan.args.Remove("--max-scan-delay");
+	    Masscan.args.Remove("--host-timeout");
+	    Masscan.categories = new string[]{"default", "discovery"};
+
             var nseshell = new NseShell(nmap, nsepath, workspace);
             nseshell.modules.Add("discovery/tcp/connect", TcpConnect);
             nseshell.modules.Add("discovery/tcp/syn", TcpSYN);
@@ -1270,6 +1283,7 @@ namespace ObsidianSailboat
             nseshell.modules.Add("discovery/sctp/sctp-cookie-echo", SctpCookieEcho);
             nseshell.modules.Add("discovery/udp/scan", UdpScan);
             nseshell.modules.Add("discovery/ping/host-discovery", DiscoveryScan);
+	    nseshell.modules.Add("discovery/tcp/masscan-discovery", Masscan);
 
             //TcpConnect.Set_opt("RHOST", "195.22.127.231");
             //TcpConnect.Run(nseshell.global_options, new List<string>());

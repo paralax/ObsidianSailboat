@@ -2,3 +2,4 @@
 nmap="/usr/bin/nmap"
 nsepath="/usr/share/nmap/scripts/"
 workspace="default"
+masscan="/usr/bin/masscan"
