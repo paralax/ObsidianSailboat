@@ -1,4 +1,4 @@
 [options]
-nmap="/usr/local/bin/nmap"
+nmap="/usr/bin/nmap"
 nsepath="/usr/share/nmap/scripts/"
 workspace="default"
