@@ -21,6 +21,7 @@ namespace ObsidianSailboat
         public string nmap_path;
         public string license;
         public Dictionary<string, NmapOption> args;
+        public Dictionary<string, NmapOption> nmap_args;
         public HashSet<string> flags;
         public string author;
         public string name;
@@ -34,16 +35,17 @@ namespace ObsidianSailboat
             this.path = nmap_path;
             this.name = "";
             this.args = new Dictionary<string, NmapOption>();
+            this.nmap_args = new Dictionary<string, NmapOption>();
             this.script = new string[] {};
             this.args.Add("RPORT", new NmapOption("80", "The target port"));
             this.args.Add("RHOST", new NmapOption("default", "The target address"));
-            this.args.Add("http.useragent", new NmapOption("", "User-agent to set for HTTP requests"));
-	    this.args.Add("--dns-servers", new NmapOption("8.8.8.8", "Specify custom DNS servers"));
-	    this.args.Add("--min-parallelism", new NmapOption("4", "Probe parallelization minimum"));
-	    this.args.Add("--max-parallelism", new NmapOption("100", "Probe parallelization maximum"));
-	    this.args.Add("--max-retries", new NmapOption("10", "Caps number of port scan probe retransmissions"));
-	    this.args.Add("--max-scan-delay", new NmapOption("0", "Adjust delay between probes"));
-	    this.args.Add("--host-timeout", new NmapOption("30", "Give up on target after this long"));
+            this.nmap_args.Add("http.useragent", new NmapOption("", "User-agent to set for HTTP requests"));
+	    this.nmap_args.Add("--dns-servers", new NmapOption("8.8.8.8", "Specify custom DNS servers"));
+	    this.nmap_args.Add("--min-parallelism", new NmapOption("4", "Probe parallelization minimum"));
+	    this.nmap_args.Add("--max-parallelism", new NmapOption("100", "Probe parallelization maximum"));
+	    this.nmap_args.Add("--max-retries", new NmapOption("10", "Caps number of port scan probe retransmissions"));
+	    this.nmap_args.Add("--max-scan-delay", new NmapOption("0", "Adjust delay between probes"));
+	    this.nmap_args.Add("--host-timeout", new NmapOption("30", "Give up on target after this long"));
             this.flags = new HashSet<string>();
 	    this.flags.Add("-R");
 	    this.flags.Add("-oX -");
@@ -59,17 +61,18 @@ namespace ObsidianSailboat
             this.path = nse_path;
             this.name = System.IO.Path.GetFileName(this.path).Replace(".nse", "");
             this.args = new Dictionary<string, NmapOption>();
+            this.nmap_args = new Dictionary<string, NmapOption>();
             this.script = System.IO.File.ReadAllLines(nse_path);
             string portspec = this.Parse_Portspec();
             this.args.Add("RPORT", new NmapOption(portspec, "The target port"));
             this.args.Add("RHOST", new NmapOption("default", "The target address"));
-            this.args.Add("http.useragent", new NmapOption("", "User-agent to set for HTTP requests"));
-	    this.args.Add("--dns-servers", new NmapOption("8.8.8.8", "Specify custom DNS servers"));
-	    this.args.Add("--min-parallelism", new NmapOption("4", "Probe parallelization minimum"));
-	    this.args.Add("--max-parallelism", new NmapOption("100", "Probe parallelization maximum"));
-	    this.args.Add("--max-retries", new NmapOption("10", "Caps number of port scan probe retransmissions"));
-	    this.args.Add("--max-scan-delay", new NmapOption("0", "Adjust delay between probes"));
-	    this.args.Add("--host-timeout", new NmapOption("30", "Give up on target after this long"));
+            this.nmap_args.Add("http.useragent", new NmapOption("", "User-agent to set for HTTP requests"));
+	    this.nmap_args.Add("--dns-servers", new NmapOption("8.8.8.8", "Specify custom DNS servers"));
+	    this.nmap_args.Add("--min-parallelism", new NmapOption("4", "Probe parallelization minimum"));
+	    this.nmap_args.Add("--max-parallelism", new NmapOption("100", "Probe parallelization maximum"));
+	    this.nmap_args.Add("--max-retries", new NmapOption("10", "Caps number of port scan probe retransmissions"));
+	    this.nmap_args.Add("--max-scan-delay", new NmapOption("0", "Adjust delay between probes"));
+	    this.nmap_args.Add("--host-timeout", new NmapOption("30", "Give up on target after this long"));
             this.flags = new HashSet<string>();
 	    this.flags.Add("-R");
 	    this.flags.Add("-oX -");
@@ -100,7 +103,12 @@ namespace ObsidianSailboat
                         cmdname = String.Join("/", new string[]{cat, ab[0], this.name});
                         names.Add(cmdname);
                     }
-                }
+                } else {
+		    foreach (string cat in this.categories) {
+		       cmdname = String.Join("/", new string[]{cat, this.name});
+		       names.Add(cmdname);
+		    }
+		}
             } else {
                 foreach (string cat in this.categories) {
                     cmdname = String.Join("/", new string[]{cat, this.name});
@@ -232,6 +240,12 @@ namespace ObsidianSailboat
                     g_flags = g_flags + " " + kv.Key + " " + kv.Value.oval;
                 }
             }
+	    string n_args = "";
+	    foreach (KeyValuePair<string, NmapOption> kv in this.nmap_args) {
+		if (kv.Value.oval.Length > 0) {
+		    n_args = n_args + " " + kv.Key + " " + kv.Value.oval;
+		}
+	    }
             string ports = this.args["RPORT"].oval;
             if (ports.Length > 0) {
                 ports = "-p " + ports;
@@ -240,7 +254,7 @@ namespace ObsidianSailboat
             if (hostspec == "default" || hostspec.Trim().Length == 0) {
                 hostspec = String.Join(' ', hosts);
             }
-            string cmd = $" {ports} {extra_args} {flags} {g_flags} {script} {script_args} {hostspec}";
+            string cmd = $" {ports} {extra_args} {flags} {n_args} {g_flags} {script} {script_args} {hostspec}";
             Console.WriteLine(this.nmap_path + " " + cmd);
 
             Process process = new Process {
