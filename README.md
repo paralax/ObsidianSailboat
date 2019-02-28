@@ -8,7 +8,7 @@ This is designed to couple to tools like recon-ng, SET, metasploit, and w3af for
 
 # preparing and installing
 
-You'll have to install the dotnet core, and while we're at it we'll install `aptitude` as well:
+You'll have to install the dotnet core, and while we're at it we'll install `aptitude` as well. You have to add a couple of dependencies, add the MS repo info, and then install the dotnet-sdk package:
 
 	$ wget http://mirrors.edge.kernel.org/ubuntu/pool/main/i/icu/libicu60_60.2-6ubuntu1_amd64.deb
 	$ sudo dpkg -i libicu60_60.2-6ubuntu1_amd64.deb
