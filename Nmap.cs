@@ -246,7 +246,13 @@ namespace ObsidianSailboat
 		    n_args = n_args + " " + kv.Key + " " + kv.Value.oval;
 		}
 	    }
-            string ports = this.args["RPORT"].oval;
+	    string ports;
+            try {
+		ports = this.args["RPORT"].oval;
+	    } 
+	    catch {
+		ports = "";
+	    }
             if (ports.Length > 0) {
                 ports = "-p " + ports;
             }
