@@ -6,6 +6,41 @@ A tool that integrates a bunch of NSE scripts together to build a picture of a h
 
 This is designed to couple to tools like recon-ng, SET, metasploit, and w3af for discovery, mapping, and footprinting. 
 
+# usage 
+
+The commands borrow models like set, setg, and the like from Metasploit.
+
+| Command | Description | Example |
+| --------|-------------|---------|
+| add | Add a host by IP or hostname | `add 1.2.3.4` |
+| back | Return to the top level command | `back` |
+| banner | Prints a random OSail banner | `banner` |
+| detail | Get detailed info about a host | `detail 1.2.3.4` |
+| exit | Exits OSail | `exit` |
+| getf |  Get the module's Nmap flags | `getf` |
+| getg | Get global option information | `getg` |
+| help | List available commands with "help" or detailed help with "help cmd". | `help` |
+| hosts | Show info about known hosts | `hosts` |
+| import | Import an Nmap XML file and add information | `import nmap_output.xml` |
+| ports | Show known hosts, ports, and information | `ports`, `ports state open`, `ports 1.2.3.4`, `ports port 22` |
+| rescan | Rescans NSE directory | `rescan` |
+| restore | Replays a session from a savefile | `restore mycmds.txt` |
+| run | Runs the selected module | `run` |
+| search | Searches modules for the argument | `search tftp` |
+| set | Set a module specific option | `set RHOST 1.2.3.0/24` |
+| setf | Set a global flag | `setf -P0` |
+| setg | Set a global option | `setg --scan-delay 99` |
+| show | Show information about modules or results: 'vulns', 'info', 'description', 'results' | `show info` |
+| sleep | Sleep for N seconds | `sleep 2` |
+| unset | Unset the option | `unset RHOST` |
+| unsetf | Unsets a flag | `unsetf -R` |
+| use | Use the selected module | `use intrusive/tftp/tftp-enum` |
+| workspace | Show, change, or create a workspace | `workspace add customer`, `workspace select customer` |
+
+Hosts are defined in the `RHOST` option, much like Metasploit. Like Metasploit and Recon-ng, if you see (or set) the option "default" it will enumerate targets from the hosts it's identified. 
+
+Often I will use the host discovery modules - aka `discovery/ping/host-discovery` or `discovery/tcp/masscan-discovery` - and set `RHOST` to a CIDR network and let those modules run and find live hosts. Then future modules I choose - e.g. `discovery/banner` - will scan only those live hosts. 
+
 # requirements
 
 Because ObsidianSailboat wraps [Nmap](https://nmap.org/), you must have Nmap installed. You can see more about the large body of NSE scripts available at the [NSEDoc](https://nmap.org/nsedoc/) site. 
