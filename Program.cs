@@ -120,7 +120,7 @@ namespace ObsidianSailboat
             return;
         }
 
-        private List<string> Get_Hosts() {
+        public List<string> Get_Hosts() {
             var hosts = new List<string>();
             SparqlQueryParser parser = new SparqlQueryParser();
             string query = @"PREFIX net: <http://example.com/schema/1/net#> 
@@ -148,6 +148,13 @@ namespace ObsidianSailboat
                 var files = Directory.GetFiles(nse_dir, "*.nse");
                 foreach (string file in files) {
                     Nmap nse = new Nmap(this.nmap_path, file);
+		    if (Array.IndexOf(nse.categories, "external") > -1) {
+			this.nw.Info("found an external script");
+			nse.flags.Add("-sn");
+			nse.flags.Add("-Pn");
+			nse.flags.Add("-n");
+			nse.args.Remove("RPORT");
+		    }
                     foreach (string name in nse.Name_Branch()) {
                         this.nw.Info($"Adding {file} as {name}");
                         this.modules.Add(name, nse);
@@ -1267,12 +1274,12 @@ namespace ObsidianSailboat
 	    Masscan.path = C.options.masscan;
 	    Masscan.description = "Host discovery using masscan, far more efficient for wide area service discovery than nmap.";
 	    Masscan.flags.Remove("-R");
-	    Masscan.args.Remove("--dns-servers");
-	    Masscan.args.Remove("--min-parallelism");
-	    Masscan.args.Remove("--max-parallelism");
-	    Masscan.args.Remove("--max-retries");
-	    Masscan.args.Remove("--max-scan-delay");
-	    Masscan.args.Remove("--host-timeout");
+	    Masscan.nmap_args.Remove("--dns-servers");
+	    Masscan.nmap_args.Remove("--min-parallelism");
+	    Masscan.nmap_args.Remove("--max-parallelism");
+	    Masscan.nmap_args.Remove("--max-retries");
+	    Masscan.nmap_args.Remove("--max-scan-delay");
+	    Masscan.nmap_args.Remove("--host-timeout");
 	    Masscan.categories = new string[]{"default", "discovery"};
 
             var nseshell = new NseShell(nmap, nsepath, workspace);
@@ -1287,7 +1294,8 @@ namespace ObsidianSailboat
 
             //TcpConnect.Set_opt("RHOST", "195.22.127.231");
             //TcpConnect.Run(nseshell.global_options, new List<string>());
-
+	    //var Censys = new Nmap(nmap, "/usr/share/nmap/scripts/censys-api.nse");
+            //Censys.Run(nseshell.global_options, nseshell.Get_Hosts());
             nseshell.OneCmd("banner");
             nw.Info("Welcome to Obsidian Sailboat");
             nseshell.HistoryFileName = String.Format($"{homedir}/.osail/commands");
