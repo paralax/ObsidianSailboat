@@ -1041,9 +1041,13 @@ namespace ObsidianSailboat
                 return;
             }
             if (arg == "description") {
-                Console.WriteLine(this.handler.description);
+                Console.WriteLine(String.Join("\n", this.handler.GetWordGroups(this.handler.description, 100)));
                 return;
             } 
+	    if (arg == "options") {
+		Console.WriteLine(String.Join("\r\n", this.handler.ListOptions()));
+		return;
+	    }
             if (arg == "results") {
                 this.Show_Results(this.handler.name);
                 return;

@@ -296,11 +296,16 @@ namespace ObsidianSailboat
                 this.args.Remove(opt);
                 this.args.Add(opt, new NmapOption(val, no.odesc));
                 return true;
-            } else {
-                var nw = new NseWriter();
-                nw.Warn("No such option: " + opt);
-                return false;
-            }
+	    } 
+	    if (this.nmap_args.ContainsKey(opt)) {
+		var no = this.nmap_args[opt];
+		this.nmap_args.Remove(opt);
+		this.nmap_args.Add(opt, new NmapOption(val, no.odesc));
+		return true;
+	    }
+            var nw = new NseWriter();
+            nw.Warn("No such option: " + opt);
+            return false;
         }
 
         public bool Unset_flag(string flag) {
@@ -337,7 +342,7 @@ namespace ObsidianSailboat
             return wordList;
         }
 
-        private List<string> ListOptions() {
+        public List<string> ListOptions() {
             var res = new List<string>();
             res.Add("\r\n");
             res.Add("Options:");
@@ -345,6 +350,20 @@ namespace ObsidianSailboat
             res.Add(String.Format("  {0,-40}{1,-20}{2}", "----", "---------------", "-----------"));
             string row;
             foreach (KeyValuePair<string, NmapOption> kv in this.args) {                
+                row = String.Format("  {0,-40}{1,-20}{2}", kv.Key, kv.Value.oval, kv.Value.odesc);
+                res.Add(row);
+            }
+            return res;
+        }
+
+        public List<string> ListNmapArgs() {
+            var res = new List<string>();
+            res.Add("\r\n");
+            res.Add("Nmap Arguments:");
+            res.Add(String.Format("  {0,-40}{1,-20}{2}", "Name", "Current Setting", "Description"));
+            res.Add(String.Format("  {0,-40}{1,-20}{2}", "----", "---------------", "-----------"));
+            string row;
+            foreach (KeyValuePair<string, NmapOption> kv in this.nmap_args) {                
                 row = String.Format("  {0,-40}{1,-20}{2}", kv.Key, kv.Value.oval, kv.Value.odesc);
                 res.Add(row);
             }
@@ -359,7 +378,7 @@ namespace ObsidianSailboat
             string categories = String.Format("{0,18}{1}", "Categories: ", String.Join(", ", this.categories));
             string[] res = {name, module, author, license, categories};
             string desc = String.Join("\n", this.GetWordGroups(this.description, 100));
-            return ($"{String.Join("\r\n", res)}\r\n{String.Join("\r\n", this.ListOptions())}\r\n\r\nDescription:\r\n{desc}");
+            return ($"{String.Join("\r\n", res)}{String.Join("\r\n", this.ListNmapArgs())}{String.Join("\r\n", this.ListOptions())}\r\nDescription:\r\n{desc}");
         }  
     }
 }
