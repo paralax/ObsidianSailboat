@@ -41,6 +41,8 @@ Hosts are defined in the `RHOST` option, much like Metasploit. Like Metasploit a
 
 Often I will use the host discovery modules - aka `discovery/ping/host-discovery` or `discovery/tcp/masscan-discovery` - and set `RHOST` to a CIDR network and let those modules run and find live hosts. Then future modules I choose - e.g. `discovery/banner` - will scan only those live hosts. 
 
+For flags, OSail tries to be smart about stuff, but it can always be smarter. It determines if the script calls external services (e.g. enrichment APIs) and sets the appropriate flags. It could be a lot smarter at helping scale Nmap, it often chumps out on large scans (a lot of dest IPs and port combined).
+
 # requirements
 
 Because ObsidianSailboat wraps [Nmap](https://nmap.org/), you must have Nmap installed. You can see more about the large body of NSE scripts available at the [NSEDoc](https://nmap.org/nsedoc/) site. 
