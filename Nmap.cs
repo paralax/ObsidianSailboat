@@ -47,6 +47,7 @@ namespace ObsidianSailboat
 	    this.nmap_args.Add("--max-scan-delay", new NmapOption("0", "Adjust delay between probes"));
 	    this.nmap_args.Add("--host-timeout", new NmapOption("30", "Give up on target after this long"));
             this.flags = new HashSet<string>();
+	    this.flags.Add("-sV");
 	    this.flags.Add("-R");
 	    this.flags.Add("-oX -");
             this.author = "Fyodor";
@@ -74,6 +75,7 @@ namespace ObsidianSailboat
 	    this.nmap_args.Add("--max-scan-delay", new NmapOption("0", "Adjust delay between probes"));
 	    this.nmap_args.Add("--host-timeout", new NmapOption("30", "Give up on target after this long"));
             this.flags = new HashSet<string>();
+	    this.flags.Add("-sV");
 	    this.flags.Add("-R");
 	    this.flags.Add("-oX -");
             this.author = this.Parse_Author();
