@@ -13,6 +13,7 @@ using NCmd;
 using NDesk.Options;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System.Data.SQLite;
 using Toml; // https://github.com/rossipedia/toml-net
 using VDS.RDF;
 using VDS.RDF.Parsing;
@@ -835,12 +836,34 @@ namespace ObsidianSailboat
         [CmdCommand(Command = "import",
                     Description = "Import an Nmap XML file and add information")]
         public void Import_XML(string arg) {
-            if (File.Exists(arg)) {
-                string nmap_xml = File.ReadAllText(arg);
-                Parse_Nmap_XML(nmap_xml);
-            } else {
-                this.nw.Error($"No such file: {arg}");
-            }
+            var homedir = Environment.GetEnvironmentVariable("HOME");
+	    if (arg.Length > 0) {
+                string[] args = Regex.Split(arg, @"[\s+]");
+		if (args[0] == "nmap") {
+                    if (File.Exists(args[1])) {
+                       string nmap_xml = File.ReadAllText(arg);
+                       Parse_Nmap_XML(nmap_xml);
+		       return;
+                    } else {
+                       this.nw.Error($"No such file: {arg}");
+		    }
+	        } else if (args[0] == "recon-ng") {
+		    if (File.Exists($"{homedir}/.recon-ng/workspaces/{args[1]}/data.db")) {
+	                SQLiteConnection conn;
+		        conn = new SQLiteConnection($"{homedir}/.recon-ng/workspaces/{args[1]}/data.db");
+		        conn.Open();
+		        string sql = "SELECT distinct(ip_address) FROM hosts WHERE ip_address IS NOT NULL";
+		        SQLiteCommand cmd = new SQLiteCommand(sql, conn);
+		        SQLiteDataReader reader = cmd.ExecuteReader();
+		        sql = "SELECT distinct(ip_address), port FROM ports WHERE ip_address IS NOT NULL";
+		        conn.Close();
+		        return;
+		    } else {
+			this.nw.Error($"No such recon-ng workspace: {args[1]}");
+		    }
+		}
+	    } 
+	    this.nw.Error("Usage: import nmap /path/to/nmap.xml  or import recon-ng workspacename");
         }
 
         [CmdCommand(Command = "ports",
