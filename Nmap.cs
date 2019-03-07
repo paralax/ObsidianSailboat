@@ -348,11 +348,11 @@ namespace ObsidianSailboat
             var res = new List<string>();
             res.Add("\r\n");
             res.Add("Options:");
-            res.Add(String.Format("  {0,-40}{1,-20}{2}", "Name", "Current Setting", "Description"));
-            res.Add(String.Format("  {0,-40}{1,-20}{2}", "----", "---------------", "-----------"));
+            res.Add(String.Format("  {0,-40} {1,-20} {2}", "Name", "Current Setting", "Description"));
+            res.Add(String.Format("  {0,-40} {1,-20} {2}", "----", "---------------", "-----------"));
             string row;
             foreach (KeyValuePair<string, NmapOption> kv in this.args) {                
-                row = String.Format("  {0,-40}{1,-20}{2}", kv.Key, kv.Value.oval, kv.Value.odesc);
+                row = String.Format("  {0,-40} {1,-20} {2}", kv.Key, kv.Value.oval, kv.Value.odesc);
                 res.Add(row);
             }
             return res;
@@ -362,22 +362,22 @@ namespace ObsidianSailboat
             var res = new List<string>();
             res.Add("\r\n");
             res.Add("Nmap Arguments:");
-            res.Add(String.Format("  {0,-40}{1,-20}{2}", "Name", "Current Setting", "Description"));
-            res.Add(String.Format("  {0,-40}{1,-20}{2}", "----", "---------------", "-----------"));
+            res.Add(String.Format("  {0,-40} {1,-20} {2}", "Name", "Current Setting", "Description"));
+            res.Add(String.Format("  {0,-40} {1,-20} {2}", "----", "---------------", "-----------"));
             string row;
             foreach (KeyValuePair<string, NmapOption> kv in this.nmap_args) {                
-                row = String.Format("  {0,-40}{1,-20}{2}", kv.Key, kv.Value.oval, kv.Value.odesc);
+                row = String.Format("  {0,-40} {1,-20} {2}", kv.Key, kv.Value.oval, kv.Value.odesc);
                 res.Add(row);
             }
             return res;
         }
 
         public override string ToString() {
-            string name = String.Format("{0,18}{1}", "Name: ", this.name);
-            string module = String.Format("{0,18}{1}", "Module: ", this.path);
-            string author = String.Format("{0,18}{1}", "Author(s): ", String.Join(", ", this.author));
-            string license = String.Format("{0,18}{1}", "License: ", this.license);
-            string categories = String.Format("{0,18}{1}", "Categories: ", String.Join(", ", this.categories));
+            string name = String.Format("{0,18} {1}", "Name: ", this.name);
+            string module = String.Format("{0,18 }{1}", "Module: ", this.path);
+            string author = String.Format("{0,18 }{1}", "Author(s): ", String.Join(", ", this.author));
+            string license = String.Format("{0,18 }{1}", "License: ", this.license);
+            string categories = String.Format("{0,18 }{1}", "Categories: ", String.Join(", ", this.categories));
             string[] res = {name, module, author, license, categories};
             string desc = String.Join("\n", this.GetWordGroups(this.description, 100));
             return ($"{String.Join("\r\n", res)}{String.Join("\r\n", this.ListNmapArgs())}{String.Join("\r\n", this.ListOptions())}\r\nDescription:\r\n{desc}");
