@@ -834,7 +834,7 @@ namespace ObsidianSailboat
         }
 
         [CmdCommand(Command = "import",
-                    Description = "Import an Nmap XML file and add information")]
+                    Description = "import nmap /path/to/nmap.xml   Import an Nmap XML file and add information\nimport recon-ng workspacename   Import hosts and ports from a Recon-NG workspace")]
         public void Import_XML(string arg) {
             var homedir = Environment.GetEnvironmentVariable("HOME");
 	    if (arg.Length > 0) {
