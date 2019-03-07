@@ -854,13 +854,16 @@ namespace ObsidianSailboat
 	                SQLiteConnection conn;
 		        conn = new SQLiteConnection($"Data Source={homedir}/.recon-ng/workspaces/{args[1]}/data.db;Version=3");
 		        conn.Open();
-		        string ipsql = "SELECT distinct(ip_address) FROM hosts WHERE ip_address IS NOT NULL";
+		        string ipsql = "SELECT distinct(ip_address), host FROM hosts WHERE ip_address IS NOT NULL";
 		        SQLiteCommand cmd = new SQLiteCommand(ipsql, conn);
 		        SQLiteDataReader ipreader = cmd.ExecuteReader();
 			while (ipreader.Read()) {
 			    XElement host = new XElement("nmaprun",
 					     new XElement("host",
-					      new XElement("address", new XAttribute("addr", ipreader["ip_address"]))
+					      new XElement("address", new XAttribute("addr", ipreader["ip_address"])),
+					       new XElement("hostnames", 
+						new XElement("hostname", new XAttribute("name", ipreader["host"]),
+							                 new XAttribute("type", "A")))
 					      ),
 					     new XElement("runstats",
 				 	      new XElement("finished", new XAttribute("summary", "Added 1 host")))
