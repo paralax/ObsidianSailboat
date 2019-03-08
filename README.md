@@ -21,7 +21,8 @@ The commands borrow models like set, setg, and the like from Metasploit.
 | getg | Get global option information | `getg` |
 | help | List available commands with "help" or detailed help with "help cmd". | `help` |
 | hosts | Show info about known hosts | `hosts` |
-| import | Import an Nmap XML file and add information | `import nmap_output.xml` |
+| import | Import an Nmap XML file and add information | `import nmap /path/to/nmap.xml` | 
+| import | Import hosts and ports from a Recon-NG workspace | `import recon-ng workspacename` |
 | ports | Show known hosts, ports, and information | `ports`, `ports state open`, `ports 1.2.3.4`, `ports port 22` |
 | rescan | Rescans NSE directory | `rescan` |
 | restore | Replays a session from a savefile | `restore mycmds.txt` |
