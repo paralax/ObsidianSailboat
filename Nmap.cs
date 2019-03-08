@@ -31,59 +31,50 @@ namespace ObsidianSailboat
         public string[] categories;
         public Nmap(string nmap_path) {
             // Using Nmap's built in functionality
+			this.Init();
             this.nmap_path = nmap_path;
             this.path = nmap_path;
             this.name = "";
-            this.args = new Dictionary<string, NmapOption>();
-            this.nmap_args = new Dictionary<string, NmapOption>();
-            this.script = new string[] {};
-            this.args.Add("RPORT", new NmapOption("80", "The target port"));
-            this.args.Add("RHOST", new NmapOption("default", "The target address"));
-            this.nmap_args.Add("http.useragent", new NmapOption("", "User-agent to set for HTTP requests"));
-	    this.nmap_args.Add("--dns-servers", new NmapOption("8.8.8.8", "Specify custom DNS servers"));
-	    this.nmap_args.Add("--min-parallelism", new NmapOption("4", "Probe parallelization minimum"));
-	    this.nmap_args.Add("--max-parallelism", new NmapOption("100", "Probe parallelization maximum"));
-	    this.nmap_args.Add("--max-retries", new NmapOption("10", "Caps number of port scan probe retransmissions"));
-	    this.nmap_args.Add("--max-scan-delay", new NmapOption("0", "Adjust delay between probes"));
-	    this.nmap_args.Add("--host-timeout", new NmapOption("30", "Give up on target after this long"));
-            this.flags = new HashSet<string>();
-	    this.flags.Add("-sV");
-	    this.flags.Add("-R");
-	    this.flags.Add("-oX -");
             this.author = "Fyodor";
             this.categories = new string[] {};
             this.description = "";
             this.license = "Nmap--See https://nmap.org/book/man-legal.html";
+            this.args.Add("RPORT", new NmapOption("80", "The target port"));
         }
 
         public Nmap(string nmap_path, string nse_path) {
             // Using NSE scripts
+			this.Init();
             this.nmap_path = nmap_path;
             this.path = nse_path;
             this.name = System.IO.Path.GetFileName(this.path).Replace(".nse", "");
-            this.args = new Dictionary<string, NmapOption>();
-            this.nmap_args = new Dictionary<string, NmapOption>();
             this.script = System.IO.File.ReadAllLines(nse_path);
             string portspec = this.Parse_Portspec();
             this.args.Add("RPORT", new NmapOption(portspec, "The target port"));
-            this.args.Add("RHOST", new NmapOption("default", "The target address"));
-            this.nmap_args.Add("http.useragent", new NmapOption("", "User-agent to set for HTTP requests"));
-	    this.nmap_args.Add("--dns-servers", new NmapOption("8.8.8.8", "Specify custom DNS servers"));
-	    this.nmap_args.Add("--min-parallelism", new NmapOption("4", "Probe parallelization minimum"));
-	    this.nmap_args.Add("--max-parallelism", new NmapOption("100", "Probe parallelization maximum"));
-	    this.nmap_args.Add("--max-retries", new NmapOption("10", "Caps number of port scan probe retransmissions"));
-	    this.nmap_args.Add("--max-scan-delay", new NmapOption("0", "Adjust delay between probes"));
-	    this.nmap_args.Add("--host-timeout", new NmapOption("30", "Give up on target after this long"));
-            this.flags = new HashSet<string>();
-	    this.flags.Add("-sV");
-	    this.flags.Add("-R");
-	    this.flags.Add("-oX -");
             this.author = this.Parse_Author();
             this.categories = this.Parse_Categories();
             this.description = this.Parse_Description();
             this.license = this.Parse_License();
             this.Parse_Args();
         }
+		
+		private void Init() {
+            this.args = new Dictionary<string, NmapOption>();
+            this.nmap_args = new Dictionary<string, NmapOption>();
+            this.script = new string[] {};
+            this.args.Add("RHOST", new NmapOption("default", "The target address"));
+            this.nmap_args.Add("http.useragent", new NmapOption("", "User-agent to set for HTTP requests"));
+		    this.nmap_args.Add("--dns-servers", new NmapOption("8.8.8.8", "Specify custom DNS servers"));
+		    this.nmap_args.Add("--min-parallelism", new NmapOption("4", "Probe parallelization minimum"));
+		    this.nmap_args.Add("--max-parallelism", new NmapOption("100", "Probe parallelization maximum"));
+		    this.nmap_args.Add("--max-retries", new NmapOption("10", "Caps number of port scan probe retransmissions"));
+		    this.nmap_args.Add("--max-scan-delay", new NmapOption("0", "Adjust delay between probes"));
+		    this.nmap_args.Add("--host-timeout", new NmapOption("30", "Give up on target after this long"));
+            this.flags = new HashSet<string>();
+		    this.flags.Add("-sV");
+		    this.flags.Add("-R");
+		    this.flags.Add("-oX -");			
+		}
 
         public string About() {
             string[] res = Regex.Split(this.description, @"\.\s+");
