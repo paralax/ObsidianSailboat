@@ -860,7 +860,8 @@ namespace ObsidianSailboat
 			while (ipreader.Read()) {
 			    XElement host = new XElement("nmaprun",
 					     new XElement("host",
-					      new XElement("address", new XAttribute("addr", ipreader["ip_address"])),
+					      new XElement("address", new XAttribute("addr", ipreader["ip_address"]),
+						                      new XAttribute("type", "ipv4")),
 					       new XElement("hostnames", 
 						new XElement("hostname", new XAttribute("name", ipreader["host"]),
 							                 new XAttribute("type", "A")))
@@ -870,24 +871,32 @@ namespace ObsidianSailboat
 					    );
 			    this.Parse_Nmap_XML(host.ToString());
 			}
-		        string portsql = "SELECT distinct(ip_address), port FROM ports WHERE ip_address IS NOT NULL";
+		        string portsql = "SELECT distinct(ip_address), port, protocol FROM ports WHERE ip_address IS NOT NULL";
 			SQLiteCommand portcmd = new SQLiteCommand(portsql, conn);
 			SQLiteDataReader portreader = portcmd.ExecuteReader();
+			List<XElement> hosts = new List<XElement>();
+			int cnt = 0;
 			while (portreader.Read()) {
-			    XElement host = new XElement("nmaprun",
-					     new XElement("host",
-					      new XElement("address", new XAttribute("addr", portreader["ip_address"])),
-					       new XElement("ports", 
-						new XElement("port", new XAttribute("protocol", "tcp"), 
-							             new XAttribute("portid", portreader["port"]),
-						 new XElement("state", new XAttribute("state", "open"),
-							               new XAttribute("reason", "syn-ack"))
-					      ))),
-					     new XElement("runstats",
-				 	      new XElement("finished", new XAttribute("summary", "Added 1 host")))
-					    );
-			    this.Parse_Nmap_XML(host.ToString());
+			    XElement thishost = new XElement("host",
+					      new XElement("address", new XAttribute("addr", portreader["ip_address"]),
+						      		      new XAttribute("type", "ipv4")),
+					      new XElement("ports", 
+					       new XElement("port", new XAttribute("protocol", "tcp"), 
+						                    new XAttribute("portid", portreader["port"]),
+					       new XElement("state", new XAttribute("state", "open"),
+						               	     new XAttribute("reason", "syn-ack"),
+								     new XAttribute("reason_ttl", "0")),
+					       new XElement("service", new XAttribute("name", portreader["protocol"]),
+						                       new XAttribute("method", "probed"),
+								       new XAttribute("conf", "10")
+					      ))));
+			    hosts.Add(thishost);
+			    cnt = cnt + 1;
 			}
+			XElement finished = new XElement("runstats", 
+					     new XElement("finished", new XAttribute("summary", $"Added {cnt} hosts")));
+			XElement allhosts = new XElement("nmaprun", hosts, finished);
+			this.Parse_Nmap_XML(allhosts.ToString());
 		        conn.Close();
 		        return;
 		    } else {
