@@ -13,6 +13,7 @@ using NCmd;
 using NDesk.Options;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System.Data.SQLite;
 using Toml; // https://github.com/rossipedia/toml-net
 using VDS.RDF;
 using VDS.RDF.Parsing;
@@ -833,14 +834,77 @@ namespace ObsidianSailboat
         }
 
         [CmdCommand(Command = "import",
-                    Description = "Import an Nmap XML file and add information")]
+                    Description = "import nmap /path/to/nmap.xml   Import an Nmap XML file and add information\nimport recon-ng workspacename   Import hosts and ports from a Recon-NG workspace")]
         public void Import_XML(string arg) {
-            if (File.Exists(arg)) {
-                string nmap_xml = File.ReadAllText(arg);
-                Parse_Nmap_XML(nmap_xml);
-            } else {
-                this.nw.Error($"No such file: {arg}");
-            }
+            var homedir = Environment.GetEnvironmentVariable("HOME");
+	    if (arg.Length > 0) {
+                string[] args = Regex.Split(arg, @"[\s+]");
+		if (args[0] == "nmap") {
+                    if (File.Exists(args[1])) {
+                       string nmap_xml = File.ReadAllText(args[1]);
+                       Parse_Nmap_XML(nmap_xml);
+		       return;
+                    } else {
+                       this.nw.Error($"No such file: {args[1]}");
+		    }
+	        } else if (args[0] == "recon-ng") {
+		    if (File.Exists($"{homedir}/.recon-ng/workspaces/{args[1]}/data.db")) {
+			// https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/linq/creating-xml-trees-linq-to-xml-2
+			// https://blog.tigrangasparian.com/2012/02/09/getting-started-with-sqlite-in-c-part-one/
+	                SQLiteConnection conn;
+		        conn = new SQLiteConnection($"Data Source={homedir}/.recon-ng/workspaces/{args[1]}/data.db;Version=3");
+		        conn.Open();
+		        string ipsql = "SELECT distinct(ip_address), host FROM hosts WHERE ip_address IS NOT NULL";
+		        SQLiteCommand cmd = new SQLiteCommand(ipsql, conn);
+		        SQLiteDataReader ipreader = cmd.ExecuteReader();
+			while (ipreader.Read()) {
+			    XElement host = new XElement("nmaprun",
+					     new XElement("host",
+					      new XElement("address", new XAttribute("addr", ipreader["ip_address"]),
+						                      new XAttribute("type", "ipv4")),
+					       new XElement("hostnames", 
+						new XElement("hostname", new XAttribute("name", ipreader["host"]),
+							                 new XAttribute("type", "A")))
+					      ),
+					     new XElement("runstats",
+				 	      new XElement("finished", new XAttribute("summary", "Added 1 host")))
+					    );
+			    this.Parse_Nmap_XML(host.ToString());
+			}
+		        string portsql = "SELECT distinct(ip_address), port, protocol FROM ports WHERE ip_address IS NOT NULL";
+			SQLiteCommand portcmd = new SQLiteCommand(portsql, conn);
+			SQLiteDataReader portreader = portcmd.ExecuteReader();
+			List<XElement> hosts = new List<XElement>();
+			int cnt = 0;
+			while (portreader.Read()) {
+			    XElement thishost = new XElement("host",
+					      new XElement("address", new XAttribute("addr", portreader["ip_address"]),
+						      		      new XAttribute("type", "ipv4")),
+					      new XElement("ports", 
+					       new XElement("port", new XAttribute("protocol", "tcp"), 
+						                    new XAttribute("portid", portreader["port"]),
+					       new XElement("state", new XAttribute("state", "open"),
+						               	     new XAttribute("reason", "syn-ack"),
+								     new XAttribute("reason_ttl", "0")),
+					       new XElement("service", new XAttribute("name", portreader["protocol"]),
+						                       new XAttribute("method", "probed"),
+								       new XAttribute("conf", "10")
+					      ))));
+			    hosts.Add(thishost);
+			    cnt = cnt + 1;
+			}
+			XElement finished = new XElement("runstats", 
+					     new XElement("finished", new XAttribute("summary", $"Added {cnt} hosts")));
+			XElement allhosts = new XElement("nmaprun", hosts, finished);
+			this.Parse_Nmap_XML(allhosts.ToString());
+		        conn.Close();
+		        return;
+		    } else {
+			this.nw.Error($"No such recon-ng workspace: {args[1]}");
+		    }
+		}
+	    } 
+	    this.nw.Error("Usage: import nmap /path/to/nmap.xml  or import recon-ng workspacename");
         }
 
         [CmdCommand(Command = "ports",
