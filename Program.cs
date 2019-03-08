@@ -145,22 +145,22 @@ namespace ObsidianSailboat
 
         private void BuildModules() {
             this.nw.Info("Building modules ...");
-	    foreach (string nse_dir in this.nse_dir.Split(',')) {
+		    foreach (string nse_dir in this.nse_dir.Split(',')) {
                 var files = Directory.GetFiles(nse_dir, "*.nse");
                 foreach (string file in files) {
                     Nmap nse = new Nmap(this.nmap_path, file);
-		    if (Array.IndexOf(nse.categories, "external") > -1) {
-			this.nw.Info("found an external script");
-			nse.flags.Add("-sn");
-			nse.flags.Add("-Pn");
-			nse.flags.Add("-n");
-			nse.args.Remove("RPORT");
-		    }
-                    foreach (string name in nse.Name_Branch()) {
-                        this.nw.Info($"Adding {file} as {name}");
-                        this.modules.Add(name, nse);
+				    if (Array.IndexOf(nse.categories, "external") > -1) {
+					this.nw.Info("found an external script");
+					nse.flags.Add("-sn");
+					nse.flags.Add("-Pn");
+					nse.flags.Add("-n");
+					nse.args.Remove("RPORT");
+			    }
+                foreach (string name in nse.Name_Branch()) {
+                    this.nw.Info($"Adding {file} as {name}");
+	                this.modules.Add(name, nse);
                     } 
-		}
+				}
             }
             this.nw.Info("Done.");
         }
@@ -837,40 +837,40 @@ namespace ObsidianSailboat
                     Description = "import nmap /path/to/nmap.xml   Import an Nmap XML file and add information\nimport recon-ng workspacename   Import hosts and ports from a Recon-NG workspace")]
         public void Import_XML(string arg) {
             var homedir = Environment.GetEnvironmentVariable("HOME");
-	    if (arg.Length > 0) {
-                string[] args = Regex.Split(arg, @"[\s+]");
-		if (args[0] == "nmap") {
-                    if (File.Exists(args[1])) {
-                       string nmap_xml = File.ReadAllText(args[1]);
-                       Parse_Nmap_XML(nmap_xml);
-		       return;
-                    } else {
-                       this.nw.Error($"No such file: {args[1]}");
-		    }
+		    if (arg.Length > 0) {
+	                string[] args = Regex.Split(arg, @"[\s+]");
+			if (args[0] == "nmap") {
+	                    if (File.Exists(args[1])) {
+	                       string nmap_xml = File.ReadAllText(args[1]);
+	                       Parse_Nmap_XML(nmap_xml);
+			       return;
+	                    } else {
+	                       this.nw.Error($"No such file: {args[1]}");
+			    }
 	        } else if (args[0] == "recon-ng") {
-		    if (File.Exists($"{homedir}/.recon-ng/workspaces/{args[1]}/data.db")) {
-			// https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/linq/creating-xml-trees-linq-to-xml-2
-			// https://blog.tigrangasparian.com/2012/02/09/getting-started-with-sqlite-in-c-part-one/
-	                SQLiteConnection conn;
+			    if (File.Exists($"{homedir}/.recon-ng/workspaces/{args[1]}/data.db")) {
+				// https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/linq/creating-xml-trees-linq-to-xml-2
+				// https://blog.tigrangasparian.com/2012/02/09/getting-started-with-sqlite-in-c-part-one/
+                SQLiteConnection conn;
 		        conn = new SQLiteConnection($"Data Source={homedir}/.recon-ng/workspaces/{args[1]}/data.db;Version=3");
 		        conn.Open();
 		        string ipsql = "SELECT distinct(ip_address), host FROM hosts WHERE ip_address IS NOT NULL";
 		        SQLiteCommand cmd = new SQLiteCommand(ipsql, conn);
 		        SQLiteDataReader ipreader = cmd.ExecuteReader();
-			while (ipreader.Read()) {
-			    XElement host = new XElement("nmaprun",
-					     new XElement("host",
-					      new XElement("address", new XAttribute("addr", ipreader["ip_address"]),
-						                      new XAttribute("type", "ipv4")),
-					       new XElement("hostnames", 
-						new XElement("hostname", new XAttribute("name", ipreader["host"]),
-							                 new XAttribute("type", "A")))
-					      ),
-					     new XElement("runstats",
-				 	      new XElement("finished", new XAttribute("summary", "Added 1 host")))
-					    );
-			    this.Parse_Nmap_XML(host.ToString());
-			}
+				while (ipreader.Read()) {
+				    XElement host = new XElement("nmaprun",
+						     new XElement("host",
+						      new XElement("address", new XAttribute("addr", ipreader["ip_address"]),
+							                      new XAttribute("type", "ipv4")),
+						       new XElement("hostnames", 
+							new XElement("hostname", new XAttribute("name", ipreader["host"]),
+								                 new XAttribute("type", "A")))
+						      ),
+						     new XElement("runstats",
+					 	      new XElement("finished", new XAttribute("summary", "Added 1 host")))
+						    );
+				    this.Parse_Nmap_XML(host.ToString());
+				}
 		        string portsql = "SELECT distinct(ip_address), port, protocol FROM ports WHERE ip_address IS NOT NULL";
 			SQLiteCommand portcmd = new SQLiteCommand(portsql, conn);
 			SQLiteDataReader portreader = portcmd.ExecuteReader();
@@ -1230,10 +1230,10 @@ namespace ObsidianSailboat
                 Console.WriteLine($"directory {homedir}/.osail doesn't exist, creating");
                 Directory.CreateDirectory($"{homedir}/.osail");
                 Directory.CreateDirectory($"{homedir}/.osail/data");
-		File.Copy("blank.rdf", $"{homedir}/.osail/data/blank_graph.rdf");
+				File.Copy("blank.rdf", $"{homedir}/.osail/data/blank_graph.rdf");
                 Directory.CreateDirectory($"{homedir}/.osail/workspaces");
                 Directory.CreateDirectory($"{homedir}/.osail/workspaces/default");
-		File.Copy($"{homedir}/.osail/data/blank_graph.rdf", $"{homedir}/.osail/workspaces/default/graph.rdf");
+				File.Copy($"{homedir}/.osail/data/blank_graph.rdf", $"{homedir}/.osail/workspaces/default/graph.rdf");
             }
             string configfile = String.Format($"{homedir}/.osail/config.toml");
             if (!File.Exists(configfile)) {
@@ -1277,10 +1277,10 @@ namespace ObsidianSailboat
 
             var C = File.ReadAllText(configfile).ParseAsToml();;
             nmap = C.options.nmap;
-	    if (!File.Exists(nmap)) {
-		Console.WriteLine($"Fatal: Can't find {nmap}");
-		return;
-	    }
+		    if (!File.Exists(nmap)) {
+				Console.WriteLine($"Fatal: Can't find {nmap}");
+				return;
+		    }
             nsepath = C.options.nsepath;
             workspace = C.options.workspace;
 
@@ -1337,18 +1337,18 @@ namespace ObsidianSailboat
             SctpCookieEcho.flags.Add("-sZ");
             SctpCookieEcho.categories = new string[]{"default", "safe", "discovery"};
 
-	    var Masscan = new Nmap(C.options.masscan);
-	    Masscan.name = "masscan-discovery";
-	    Masscan.path = C.options.masscan;
-	    Masscan.description = "Host discovery using masscan, far more efficient for wide area service discovery than nmap.";
-	    Masscan.flags.Remove("-R");
-	    Masscan.nmap_args.Remove("--dns-servers");
-	    Masscan.nmap_args.Remove("--min-parallelism");
-	    Masscan.nmap_args.Remove("--max-parallelism");
-	    Masscan.nmap_args.Remove("--max-retries");
-	    Masscan.nmap_args.Remove("--max-scan-delay");
-	    Masscan.nmap_args.Remove("--host-timeout");
-	    Masscan.categories = new string[]{"default", "discovery"};
+		    var Masscan = new Nmap(C.options.masscan);
+		    Masscan.name = "masscan-discovery";
+		    Masscan.path = C.options.masscan;
+		    Masscan.description = "Host discovery using masscan, far more efficient for wide area service discovery than nmap.";
+		    Masscan.flags.Remove("-R");
+		    Masscan.nmap_args.Remove("--dns-servers");
+		    Masscan.nmap_args.Remove("--min-parallelism");
+		    Masscan.nmap_args.Remove("--max-parallelism");
+		    Masscan.nmap_args.Remove("--max-retries");
+		    Masscan.nmap_args.Remove("--max-scan-delay");
+		    Masscan.nmap_args.Remove("--host-timeout");
+		    Masscan.categories = new string[]{"default", "discovery"};
 
             var nseshell = new NseShell(nmap, nsepath, workspace);
             nseshell.modules.Add("discovery/tcp/connect", TcpConnect);
@@ -1358,11 +1358,11 @@ namespace ObsidianSailboat
             nseshell.modules.Add("discovery/sctp/sctp-cookie-echo", SctpCookieEcho);
             nseshell.modules.Add("discovery/udp/scan", UdpScan);
             nseshell.modules.Add("discovery/ping/host-discovery", DiscoveryScan);
-	    nseshell.modules.Add("discovery/tcp/masscan-discovery", Masscan);
+		    nseshell.modules.Add("discovery/tcp/masscan-discovery", Masscan);
 
             //TcpConnect.Set_opt("RHOST", "195.22.127.231");
             //TcpConnect.Run(nseshell.global_options, new List<string>());
-	    //var Censys = new Nmap(nmap, "/usr/share/nmap/scripts/censys-api.nse");
+		    //var Censys = new Nmap(nmap, "/usr/share/nmap/scripts/censys-api.nse");
             //Censys.Run(nseshell.global_options, nseshell.Get_Hosts());
             nseshell.OneCmd("banner");
             nw.Info("Welcome to Obsidian Sailboat");
