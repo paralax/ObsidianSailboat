@@ -942,11 +942,11 @@ namespace ObsidianSailboat
             ?x net:hasPort ?y .
             ?y net:hasNumber ?p .
             ?y net:hasProtocol ?proto .
-        OPTIONAL { ?y net:hasServiceName ?s .
-                   ?y net:hasState ?state } .
-        OPTIONAL { ?x net:hasHostname ?hn .
-                    ?hn net:hasDnsName ?name } .
-        OPTIONAL { ?y net:hasCPE ?cpe }  
+        OPTIONAL { ?y net:hasServiceName ?s } .
+        OPTIONAL { ?y net:hasState ?state } .
+        OPTIONAL { ?x net:hasHostname ?hn  .
+                   ?hn net:hasDnsName ?name } .
+        OPTIONAL { ?y net:hasCPE ?cpe } . 
         FILTEREXP  
     }
     ORDER BY ?i ?p";
@@ -1342,6 +1342,7 @@ namespace ObsidianSailboat
 		    Masscan.path = C.options.masscan;
 		    Masscan.description = "Host discovery using masscan, far more efficient for wide area service discovery than nmap.";
 		    Masscan.flags.Remove("-R");
+		    Masscan.flags.Remove("-sV");
 		    Masscan.nmap_args.Remove("--dns-servers");
 		    Masscan.nmap_args.Remove("--min-parallelism");
 		    Masscan.nmap_args.Remove("--max-parallelism");
