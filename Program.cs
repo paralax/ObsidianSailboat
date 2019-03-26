@@ -28,25 +28,26 @@ using VDS.RDF.Writing.Formatting;
 namespace ObsidianSailboat
 {
     public class NseWriter {
-        public void WriteColor(ConsoleColor color, string arg) {
+        public void WriteColor(ConsoleColor color, string leader, string arg) {
             Console.ForegroundColor = color;
-            Console.WriteLine(arg);
+            Console.Write(leader);
             Console.ResetColor();
+            Console.WriteLine(arg);
         }
         public void OK(string arg) {
-            WriteColor(ConsoleColor.Green, "[+] " + arg);
+            WriteColor(ConsoleColor.Green, "[+] ",  arg);
         }
 
         public void Warn(string arg) {
-            WriteColor(ConsoleColor.Yellow, "[-] " + arg);
+            WriteColor(ConsoleColor.Yellow, "[-] ", arg);
         }
 
         public void Error(string arg) {
-            WriteColor(ConsoleColor.Red, "[!] " + arg);
+            WriteColor(ConsoleColor.Red, "[!] ", arg);
         }
 
         public void Info(string arg) {
-            WriteColor(ConsoleColor.Cyan, "[*] " + arg);
+            WriteColor(ConsoleColor.Cyan, "[*] ", arg);
         }
     }
 
@@ -66,7 +67,9 @@ namespace ObsidianSailboat
         public NseShell(string nmap_path, string nse_dir, string workspace) {
             this.nmap_path = nmap_path;
             this.nse_dir = nse_dir;
-            CommandPrompt = "osail > ";
+	    string UNDERLINE = "\x1B[4m";
+	    string RESET = "\x1B[0m";
+            CommandPrompt = UNDERLINE + "osail " + RESET + " > ";
             this.modules = new Dictionary<string, Nmap>();
             this.handler = new Nmap(this.nmap_path);
             this.nw = new NseWriter();
@@ -584,7 +587,9 @@ namespace ObsidianSailboat
         [CmdCommand(Command = "back",
                     Description = "Return to the top level command")]
         public void Back(string arg) {
-            CommandPrompt = "osail > ";
+	    string UNDERLINE = "\x1B[4m";
+	    string RESET = "\x1B[0m";
+            CommandPrompt = UNDERLINE + "osail" + RESET + " > ";
             this.handler = new Nmap(this.nmap_path);
         }
 
@@ -1173,7 +1178,9 @@ namespace ObsidianSailboat
             if (this.modules.TryGetValue(arg, out nmap)) {
                 this.handler = nmap;
                 string name = $"\x1b[91m{this.handler.name}\x1b[0m";
-                CommandPrompt = $"osail {this.handler.categories[0]}({name}) > ";
+	    	string UNDERLINE = "\x1B[4m";
+	    	string RESET = "\x1B[0m";
+                CommandPrompt = UNDERLINE + "osail" + RESET + $" {this.handler.categories[0]}({name}) > ";
             } else {
                 nw.Warn("NO SUCH MODULE");
             }
