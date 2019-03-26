@@ -46,7 +46,7 @@ namespace ObsidianSailboat
         }
 
         public void Info(string arg) {
-            WriteColor(ConsoleColor.Blue, "[*] " + arg);
+            WriteColor(ConsoleColor.Cyan, "[*] " + arg);
         }
     }
 
