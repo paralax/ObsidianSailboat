@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Net;
 using System.Text.RegularExpressions;
@@ -55,6 +56,7 @@ namespace ObsidianSailboat
 
         public Dictionary<string, NmapOption> global_options;
         public Dictionary<string, Nmap> modules;
+	public Dictionary<string, string> flag_descriptions;
         public Nmap handler;
         private NseWriter nw;
         private string nmap_path;
@@ -72,8 +74,10 @@ namespace ObsidianSailboat
             CommandPrompt = UNDERLINE + "osail " + RESET + " > ";
             this.modules = new Dictionary<string, Nmap>();
             this.handler = new Nmap(this.nmap_path);
+	    this.flag_descriptions = new Dictionary<string, string>();
             this.nw = new NseWriter();
             this.BuildModules();
+	    this.GetFlagDescriptions();
             this.global_options = new Dictionary<string, NmapOption>();
             this.global_options.Add("--exclude", new NmapOption("", "Exclude hosts/networks"));
             this.global_options.Add("--excludefile", new NmapOption("", "Exclude list from file"));
@@ -88,6 +92,38 @@ namespace ObsidianSailboat
             this.Use_Workspace(workspace);
             this.vuln_cache = new Dictionary<string, string>();
         }
+
+	private void GetFlagDescriptions() {
+		string cmd = " -h";
+		Process process = new Process { 
+			StartInfo = new ProcessStartInfo { 
+				FileName = this.nmap_path, 
+				Arguments = cmd, 
+				UseShellExecute = false, 
+				RedirectStandardOutput = true, 
+				RedirectStandardError = true, 
+				CreateNoWindow = true
+			} 
+		}; 
+		process.Start(); 
+		string output = process.StandardOutput.ReadToEnd(); 
+		string error = process.StandardError.ReadToEnd();            
+		process.WaitForExit(); 
+		process.Close();
+
+		foreach (string line in output.Split("\n")) {
+			var words = line.Split(":");
+			if (words.Length < 2) {
+				continue;
+			}
+			var flag = words[0].Trim();
+			var descr = words[1].Trim();
+			if (flag.StartsWith("-")) {
+				this.flag_descriptions.Add(flag, descr);
+			}
+		}
+
+	}
 
         private void Add_Workspace(string workspace) {
             var homedir = Environment.GetEnvironmentVariable("HOME");
@@ -775,6 +811,13 @@ namespace ObsidianSailboat
                     Description = "Get the module's Nmap flags")]
         public void Get_Flags(string unused) {
             this.nw.Info(String.Join(" ", this.handler.flags));
+	    foreach (string flag in this.handler.flags) {
+		    foreach (KeyValuePair<string, string> kv in this.flag_descriptions) {
+			    if (kv.Key.Contains(flag.Split(" ")[0])) {
+				    this.nw.Info(String.Format("  {0,-10} {1}", flag, kv.Value));
+			    }
+		    }
+	    }
         }
 
         [CmdCommand(Command = "getg",
