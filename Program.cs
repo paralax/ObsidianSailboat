@@ -111,6 +111,11 @@ namespace ObsidianSailboat
 		process.WaitForExit(); 
 		process.Close();
 
+		if (error.Length > 0) {
+			this.nw.Error(error);
+			return;
+		}
+
 		foreach (string line in output.Split("\n")) {
 			var words = line.Split(":");
 			if (words.Length < 2) {
