@@ -37,6 +37,7 @@ The commands borrow models like set, setg, and the like from Metasploit.
 | unset | Unset the option | `unset RHOST` |
 | unsetf | Unsets a flag | `unsetf -R` |
 | use | Use the selected module | `use intrusive/tftp/tftp-enum` |
+| version | Displays the Nmap version | `version` |
 | workspace | Show, change, or create a workspace | `workspace add customer`, `workspace select customer` |
 
 Hosts are defined in the `RHOST` option, much like Metasploit. Like Metasploit and Recon-ng, if you see (or set) the option "default" it will enumerate targets from the hosts it's identified. 

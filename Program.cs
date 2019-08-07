@@ -1298,6 +1298,15 @@ namespace ObsidianSailboat
             }
         }        
 
+	[CmdCommand(Command = "version",
+		    Description = "Show Nmap version")]
+	public void Version(string unused) {
+		Set_Flag("-V");
+		string output = this.handler.Run(this.global_options, new List<string>(){});
+		Unset_Flag("-V");
+		nw.Info(output);
+	}
+
         [CmdCommand(Command = "workspace",
                     Description = "Show, change, or create a workspace")]
         public void Workspace(string arg) {
