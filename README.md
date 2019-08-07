@@ -17,6 +17,7 @@ The commands borrow models like set, setg, and the like from Metasploit.
 | banner | Prints a random OSail banner | `banner` |
 | detail | Get detailed info about a host | `detail 1.2.3.4` |
 | exit | Exits OSail | `exit` |
+| export | Exports a workspace to an Nmap XML file | `export /path/file.xml` |
 | getf |  Get the module's Nmap flags | `getf` |
 | getg | Get global option information | `getg` |
 | help | List available commands with "help" or detailed help with "help cmd". | `help` |

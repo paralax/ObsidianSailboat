@@ -579,7 +579,6 @@ namespace ObsidianSailboat
         // ADD search hosts-service by CVSS - "find me a shell on these hosts"
         // ADD iflist, routes (--iflist, then parse)
         // ADD scan through tor https://www.aldeid.com/wiki/Tor/Usage/Nmap-scan-through-tor 
-        // ADD export
 
         // IN PROGRESS
         // ADD vulners integration - search API by CPE
@@ -811,6 +810,71 @@ namespace ObsidianSailboat
         public void Exit(string arg) {
             ExitLoop();
         }
+
+	[CmdCommand(Command = "export",
+	            Description = "Exports the DB as Nmap XML to the specified filepath")]
+	public void Export(string path) {
+		if (String.IsNullOrEmpty(path)) {
+			nw.Warn("Usage: export <filepath>");
+			return;
+		}
+
+		SparqlQueryParser parser = new SparqlQueryParser();
+		string query = @"PREFIX net: <http://example.com/schema/1/net#> 
+		PREFIX vuln:  <http://example.com/schema/1/vuln#>
+		PREFIX exploit:  <http://example.com/schema/1/exploit#>
+		PREFIX cvss: <http://example.com/schema/1/cvss#>
+		PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+
+		SELECT DISTINCT 
+		    ?i ?p ?s ?proto ?state ?name ?cpe
+		WHERE { ?x rdf:type net:IP  .
+		        ?x net:hasIp ?i .
+		        ?y rdf:type net:Port .
+		        ?x net:hasPort ?y .
+		        ?y net:hasNumber ?p .
+		        ?y net:hasProtocol ?proto .
+		    OPTIONAL { ?y net:hasServiceName ?s } .
+		    OPTIONAL { ?y net:hasState ?state } .
+		    OPTIONAL { ?x net:hasHostname ?hn  .
+		               ?hn net:hasDnsName ?name } .
+		    OPTIONAL { ?y net:hasCPE ?cpe } . 
+		}
+		ORDER BY ?i ?p";
+
+		SparqlQuery q = parser.ParseFromString(query);            
+		SparqlResultSet results = this.graph.ExecuteQuery(q) as SparqlResultSet;
+		List<XElement> hosts = new List<XElement>();
+		int cnt = 0;
+		for (int i = 0; i < results.Count; i++) {		
+
+				       string svcname = "";
+				       try {
+				            svcname = results[i].Value("s").ToString();
+				       }
+				       catch {}
+			XElement thishost = new XElement("host",
+				      new XElement("address", new XAttribute("addr", results[i]["i"].ToString()),
+					      		      new XAttribute("type", "ipv4")),
+				      new XElement("ports", 
+				       new XElement("port", new XAttribute("protocol", results[i]["proto"].ToString()), 
+					                    new XAttribute("portid", results[i]["p"].ToString()),
+				       new XElement("state", new XAttribute("state", results[i]["state"].ToString()),
+					               	     new XAttribute("reason", "syn-ack"),
+							     new XAttribute("reason_ttl", "0")),
+				       new XElement("service", new XAttribute("name", svcname),
+					                       new XAttribute("method", "probed"),
+							       new XAttribute("conf", "10")
+				      ))));
+			hosts.Add(thishost);
+			cnt = cnt + 1;
+		}
+		XElement finished = new XElement("runstats", 
+				     new XElement("finished", new XAttribute("summary", $"Added {cnt} hosts")));
+		XElement allhosts = new XElement("nmaprun", hosts, finished);
+		File.WriteAllText(path, allhosts.ToString());
+		this.nw.Info(String.Format("Wrote {0} records to {1}", cnt, path));
+	}
 
         [CmdCommand(Command = "getf",
                     Description = "Get the module's Nmap flags")]
