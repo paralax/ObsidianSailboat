@@ -846,7 +846,9 @@ namespace ObsidianSailboat
 		SparqlResultSet results = this.graph.ExecuteQuery(q) as SparqlResultSet;
 		List<XElement> hosts = new List<XElement>();
 		int cnt = 0;
+		HashSet<string> ips = new HashSet<string>();
 		for (int i = 0; i < results.Count; i++) {		
+			ips.Add(results[i]["i"].ToString());
 
 				       string svcname = "";
 				       try {
@@ -870,7 +872,7 @@ namespace ObsidianSailboat
 			cnt = cnt + 1;
 		}
 		XElement finished = new XElement("runstats", 
-				     new XElement("finished", new XAttribute("summary", $"Added {cnt} hosts")));
+				     new XElement("finished", new XAttribute("summary", $"Added {ips.Count} hosts")));
 		XElement allhosts = new XElement("nmaprun", hosts, finished);
 		File.WriteAllText(path, allhosts.ToString());
 		this.nw.Info(String.Format("Wrote {0} records to {1}", cnt, path));
