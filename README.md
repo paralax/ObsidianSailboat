@@ -370,7 +370,7 @@ To run use:
 	safe/unusual-port                      Compares the detected service on a port against the expecte
 	vuln/rsa-vuln-roca                     Detects RSA keys vulnerable to Return Of Coppersmith Attack
 	osail vuln(ftp-vsftpd-backdoor)> use auth/ssh/auth-methods
-	osail intrusive(ssh-auth-methods)> use auth/set RHOST  159.89.225.14
+	osail intrusive(ssh-auth-methods)> set RHOST  159.89.225.14
 	osail intrusive(ssh-auth-methods)> run
 	[*] /usr/bin/nmap -p 22 -A -oX - --script ssh-auth-methods --script-args "" --host-timeout=10 --dns-servers=8.8.8.8 --max-retries=10 --max-scan-delay=0 --min-parallelism=1 --scan-delay=0 --max-parallelism=100 159.89.225.14
 	[+] Nmap done at Sat Mar 17 01:10:51 2018; 1 IP address (1 host up) scanned in 1.26 seconds
@@ -574,7 +574,7 @@ To run use:
 	safe/llmnr-resolve                     Resolves a hostname by using the LLMNR (Link-Local Multicas
 	safe/resolveall                        Resolves hostnames and adds every address (IPv4 or IPv6, de
 	osail safe(ssh2-enum-algos)> use safe/hostmap/robtex
-	osail safe(hostmap-robtex)> use safe/set RHOST  159.89.225.14
+	osail safe(hostmap-robtex)> set RHOST  159.89.225.14
 	osail safe(hostmap-robtex)> run
 	[*] /usr/bin/nmap -p 80 -A -oX - --script hostmap-robtex --script-args "" --host-timeout=10 --dns-servers=8.8.8.8 --max-retries=10 --max-scan-delay=0 --min-parallelism=1 --scan-delay=0 --max-parallelism=100 159.89.225.14
 	[+] Nmap done at Sat Mar 17 01:12:03 2018; 1 IP address (1 host up) scanned in 1.45 seconds
