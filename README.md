@@ -54,18 +54,16 @@ Optionally you can install [Masscan](https://github.com/robertdavidgraham/massca
 
 # preparing and installing
 
-I run OSail on Kali Linux, which has Nmap and Masscan installed. 
+I run OSail on Kali Linux, which has Nmap and Masscan installed. Tested working on dotnet core versions 2.2 and 3.0.
 
-You'll have to install the dotnet core, and while we're at it we'll install `aptitude` as well. You have to add a couple of dependencies, add the MS repo info, and then install the dotnet-sdk package:
+You'll have to install the [dotnet core](https://dotnet.microsoft.com/download/dotnet-core/3.1), and while we're at it we'll install `aptitude` as well. You have to add a couple of dependencies, add the MS repo info, and then install the dotnet-sdk package:
 
-	$ wget http://mirrors.edge.kernel.org/ubuntu/pool/main/i/icu/libicu60_60.2-6ubuntu1_amd64.deb
-	$ sudo dpkg -i libicu60_60.2-6ubuntu1_amd64.deb
-	$ wget http://mirrors.edge.kernel.org/ubuntu/pool/main/o/openssl/libssl1.0.0_1.0.2g-1ubuntu4_amd64.deb
-	$ sudo dpkg -i libssl1.0.0_1.0.2g-1ubuntu4_amd64.deb
-	$ wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb
+	$ wget -q https://packages.microsoft.com/config/ubuntu/19.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
 	$ sudo dpkg -i packages-microsoft-prod.deb
-	$ sudo apt-get install aptitude
-	$ sudo aptitude install dotnet-sdk-2.2
+        $ sudo apt-get update
+        $ sudo apt-get install apt-transport-https
+        $ sudo apt-get update
+        $ sudo apt-get install dotnet-sdk-3.0
 
 # building
 
