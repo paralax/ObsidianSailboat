@@ -65,12 +65,13 @@ namespace ObsidianSailboat
             this.args.Add("RHOST", new NmapOption("default", "The target address"));
             this.nmap_args.Add("http.useragent", new NmapOption("", "User-agent to set for HTTP requests"));
 	    this.nmap_args.Add("--dns-servers", new NmapOption("8.8.8.8", "Specify custom DNS servers"));
-	    this.nmap_args.Add("--min-parallelism", new NmapOption("4", "Probe parallelization minimum"));
-	    this.nmap_args.Add("--max-parallelism", new NmapOption("100", "Probe parallelization maximum"));
-	    this.nmap_args.Add("--max-retries", new NmapOption("10", "Caps number of port scan probe retransmissions"));
+	    this.nmap_args.Add("--min-parallelism", new NmapOption("8", "Probe parallelization minimum"));
+	    this.nmap_args.Add("--max-parallelism", new NmapOption("256", "Probe parallelization maximum"));
+	    this.nmap_args.Add("--max-retries", new NmapOption("3", "Caps number of port scan probe retransmissions"));
 	    this.nmap_args.Add("--max-scan-delay", new NmapOption("0", "Adjust delay between probes"));
-	    this.nmap_args.Add("--host-timeout", new NmapOption("30", "Give up on target after this long"));
-	    this.nmap_args.Add("--max-rate", new NmapOption("", "Send packets no faster than <number> per second"));
+	    this.nmap_args.Add("--host-timeout", new NmapOption("10s", "Give up on target after this long"));
+	    this.nmap_args.Add("--min-rate", new NmapOption("10000", "Send packets at least <number> per second"));
+	    this.nmap_args.Add("--max-rate", new NmapOption("65535", "Send packets no faster than <number> per second"));
             this.flags = new HashSet<string>();
 	    this.flags.Add("-sV");
 	    this.flags.Add("-R");
