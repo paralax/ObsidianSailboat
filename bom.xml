@@ -1,0 +1,4155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<bom xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" serialNumber="urn:uuid:fa1ee20a-3e16-4498-9afc-7478be523748" version="1" xmlns="http://cyclonedx.org/schema/bom/1.2">
+  <metadata>
+    <tools>
+      <tool>
+        <vendor>CycloneDX</vendor>
+        <name>CycloneDX module for .NET</name>
+        <version>1.6.1.0</version>
+      </tool>
+    </tools>
+  </metadata>
+  <components>
+    <component type="library">
+      <publisher>AngleSharp</publisher>
+      <name>AngleSharp</name>
+      <version>0.9.9</version>
+      <description>AngleSharp is the ultimate angle brackets parser library. It parses HTML5, CSS3, and XML to construct a DOM based on the official W3C specification.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">42D2A39E1465D5C8869EDA7CF88C555DD39B25CF4F87E92E4F74117AD1EF9410258B625A79FB1C1BAB57450C75D518CA146F8868267B443EAD150802E86CE3C4</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>https://github.com/AngleSharp/AngleSharp/blob/master/LICENSE</url>
+        </license>
+      </licenses>
+      <copyright>Copyright 2016, AngleSharp.</copyright>
+      <purl>pkg:nuget/AngleSharp@0.9.9</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://anglesharp.github.io/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>RobVesse,tpluscode,kal_ahmed,ronmichael</publisher>
+      <name>dotNetRDF</name>
+      <version>2.0.1</version>
+      <description>dotNetRDF is a RDF, SPARQL and Semantic Web API for .Net.  It provides simple but powerfully extensible APIs for this and integrates with a variety of popular triple stores.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">67B7D01260BBF6FF7163404FEFB64D6A520CEA8E5AFBE93FC2A6D7B95D27A7D6C86F34FD9AB8F0E7F68923792D51FF0C2AB94A0F120BAAFC7E4F3133813D6358</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://www.opensource.org/licenses/MIT</url>
+        </license>
+      </licenses>
+      <copyright>Copyright © dotNetRDF Project 2009-2017</copyright>
+      <purl>pkg:nuget/dotNetRDF@2.0.1</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>http://www.dotnetrdf.org/</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/dotnetrdf/dotnetrdf</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>ZZZ Projects,Simon Mourrier,Jeff Klawiter,Stephan Grell</publisher>
+      <name>HtmlAgilityPack</name>
+      <version>1.6.0</version>
+      <description>This is an agile HTML parser that builds a read/write DOM and supports plain XPATH or XSLT (you actually don't HAVE to understand XPATH nor XSLT to use it, don't worry...). It is a .NET code library that allows you to parse "out of the web" HTML files. The parser is very tolerant with "real world" malformed HTML. The object model is very similar to what proposes System.Xml, but for HTML documents (or streams).</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">1AD615E1B5695069F12CEB5D777FD639FB5D72CCE9CD0605CE4E9B40DDD89A7830C6C91FBFB7DC0212B7BBC6C2EFD7522569D17212BBC134936FAF45235C31F2</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>MIT</id>
+          <url>https://github.com/zzzprojects/html-agility-pack/blob/master/LICENSE</url>
+        </license>
+      </licenses>
+      <copyright>Copyright © ZZZ Projects Inc. 2014 - 2017</copyright>
+      <purl>pkg:nuget/HtmlAgilityPack@1.6.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>http://html-agility-pack.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>Microsoft.Extensions.Configuration</name>
+      <version>2.0.0</version>
+      <description>Implementation of key-value pair based configuration for Microsoft.Extensions.Configuration. Includes the memory configuration provider.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">2C17CB315E6F2A4C57EB133C5944F462B21850182B71F28CB895FDB9F21973BBD7DE9D35EACE53678CF2D882A99FCA799051B7D4BE80651A4F7875BE53CC019B</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>https://raw.githubusercontent.com/aspnet/Home/2.0.0/LICENSE.txt</url>
+        </license>
+      </licenses>
+      <copyright>Copyright © Microsoft Corporation</copyright>
+      <purl>pkg:nuget/Microsoft.Extensions.Configuration@2.0.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://asp.net/</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/aspnet/Configuration</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>Microsoft.Extensions.Configuration.Abstractions</name>
+      <version>2.0.0</version>
+      <description>Abstractions of key-value pair based configuration.
+Commonly used types:
+Microsoft.Extensions.Configuration.IConfiguration
+Microsoft.Extensions.Configuration.IConfigurationBuilder
+Microsoft.Extensions.Configuration.IConfigurationProvider
+Microsoft.Extensions.Configuration.IConfigurationRoot
+Microsoft.Extensions.Configuration.IConfigurationSection</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">35818457877053D38F899715EE90B7A672D5B6B95FDAA6B0FA28E5DA10E0B349A3239B3DFE9782A58FE60FAA5BA4E8695765E96EFFD23B9DF02ADC5EC6C516C7</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>https://raw.githubusercontent.com/aspnet/Home/2.0.0/LICENSE.txt</url>
+        </license>
+      </licenses>
+      <copyright>Copyright © Microsoft Corporation</copyright>
+      <purl>pkg:nuget/Microsoft.Extensions.Configuration.Abstractions@2.0.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://asp.net/</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/aspnet/Configuration</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>Microsoft.Extensions.Primitives</name>
+      <version>2.0.0</version>
+      <description>Primitives shared by framework extensions. Commonly used types include:
+Microsoft.Extensions.Primitives.IChangeToken
+Microsoft.Extensions.Primitives.StringValues
+Microsoft.Extensions.Primitives.StringSegment</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">47284B149A0CB337DBBB5AF3FE0CE8AAF3AB760B275F193407F3387CA8EC25D6FAFC8DEDD8C755AB8B35756B3C84E5CA8DCAB6EA8BEC2CBD543CBA304EC69371</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>https://raw.githubusercontent.com/aspnet/Home/2.0.0/LICENSE.txt</url>
+        </license>
+      </licenses>
+      <copyright>Copyright © Microsoft Corporation</copyright>
+      <purl>pkg:nuget/Microsoft.Extensions.Primitives@2.0.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://asp.net/</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/aspnet/Common</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>Microsoft.NETCore.App</name>
+      <version>2.0.0</version>
+      <description>A set of .NET API's that are included in the default .NET Core application model. 
+e8b8861ac7faf042c87a5c2f9f2d04c98b69f28d 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">6848F8E3211BB0AF97943C0F35233B09E6980E0DF734C938F76CB690544838C3CE5665EF5CD3B42D30E6F255214B82659B6B8D16C2030C7E2082DF659D20DE8D</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>https://github.com/dotnet/core-setup/blob/master/LICENSE.TXT</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/Microsoft.NETCore.App@2.0.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>Microsoft.NETCore.DotNetAppHost</name>
+      <version>2.0.0</version>
+      <description>Provides the .NET Core app bootstrapper intended for use in the application directory 
+e8b8861ac7faf042c87a5c2f9f2d04c98b69f28d 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>excluded</scope>
+      <hashes>
+        <hash alg="SHA-512">75840D556341B0EF4B95DA80C894EDFF0614AB6052717AB710D05A3548C42D2DEC4F9DE6C2B8323E99A82C7B04EC7D7447360E1C49791B4B20FE3A591A5200CC</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>https://github.com/dotnet/core-setup/blob/master/LICENSE.TXT</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/Microsoft.NETCore.DotNetAppHost@2.0.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>Microsoft.NETCore.DotNetHostPolicy</name>
+      <version>2.0.0</version>
+      <description>Provides a CoreCLR hosting policy implementation -- configuration settings, assembly paths and assembly servicing 
+e8b8861ac7faf042c87a5c2f9f2d04c98b69f28d 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>excluded</scope>
+      <hashes>
+        <hash alg="SHA-512">44032B42A04532217875BA47244BDCC305C6F884A8291724F335E57EBE3DC1A3DCEF1965129BFF00D1E2E1CDE909391521D34D49D0D87FBD588DB91A4521C982</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>https://github.com/dotnet/core-setup/blob/master/LICENSE.TXT</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/Microsoft.NETCore.DotNetHostPolicy@2.0.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>Microsoft.NETCore.DotNetHostResolver</name>
+      <version>2.0.0</version>
+      <description>Provides an implementation of framework resolution strategy used by Microsoft.NETCore.DotNetHost 
+e8b8861ac7faf042c87a5c2f9f2d04c98b69f28d 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>excluded</scope>
+      <hashes>
+        <hash alg="SHA-512">2EB67501C14917BF9D6B4DC8B3EE5129DAA39C354D9E88B53014408B82D189FDEE3BDAD19ED7CD51ECDE35C1BF38EFF2198CF2130189922A32C3C65618988A5A</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>https://github.com/dotnet/core-setup/blob/master/LICENSE.TXT</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/Microsoft.NETCore.DotNetHostResolver@2.0.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>Microsoft.NETCore.Platforms</name>
+      <version>2.0.0</version>
+      <description>Provides runtime information required to resolve target framework, platform, and runtime specific implementations of .NETCore packages. 
+8321c729934c0f8be754953439b88e6e1c120c24 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">0827F83639833A88AC7BB1408A3D953EE1C880A2ACBBAF7ABE44F084E90F5507CBB13981D962C57D0E3278EE5476D93C143EB7E9404CC7A63D7A8BF324A4FBE8</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>https://github.com/dotnet/corefx/blob/master/LICENSE.TXT</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/Microsoft.NETCore.Platforms@2.0.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>Microsoft.NETCore.Targets</name>
+      <version>1.1.0</version>
+      <description>Provides supporting infrastructure for portable projects: support identifiers that define framework and runtime for support targets and packages that reference the minimum supported package versions when targeting these. 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">1EF033A68688AAB9997EC1C0378ACB1638B4AFB618E533FCAF749D93389737BA94F4A0A94481BECDF701C7E988AE2FE390136A8EAE225887EE60DB45063490FE</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/Microsoft.NETCore.Targets@1.1.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>Microsoft.Win32.Primitives</name>
+      <version>4.3.0</version>
+      <description>Provides common types for Win32-based libraries.
+
+Commonly Used Types:
+System.ComponentModel.Win32Exception
+ 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">366F07A79D72F6D61C2B7C43EAA938DD68DFB6B83599D1F6E02089B136FA82BEC74B6D54D6E03E08A3C612D51C5596E3535CBC2B29F39B97A827B3E7C79826F0</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/Microsoft.Win32.Primitives@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>NCmd</publisher>
+      <name>NCmd</name>
+      <version>1.0.3</version>
+      <description>- Provides the Cmd class to quickly create command line shell program.
+- Shell commands can be created using method naming conventions or method arguments.
+- A command line argument parser.
+- Live help
+- Auto command completion</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">BE7C6D75078F2309BD630F4C10E055BF8EC4DB68E25797D669A5CF5ECE6541D3A23F5F752F5DFB71E0CDF98A2A06DAE2A6A2068B58AD9CCA36DEC199B8F250BC</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>NOASSERTION</id>
+          <url>https://raw.githubusercontent.com/adamadair/NCmd/master/LICENSE</url>
+        </license>
+      </licenses>
+      <copyright>Copyright (c) Adam Adair 2017</copyright>
+      <purl>pkg:nuget/NCmd@1.0.3</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://github.com/adamadair/NCmd</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Redpoint Games</publisher>
+      <name>NDesk.Options.Redpoint</name>
+      <version>0.2.1</version>
+      <description>A port of NDesk.Options with support for additional platforms.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">63A4825DAF880A0F2F4CD6F710A8835A60D8237773ED6BA4D5296C9ED6A745B9AC070D1CF834CE58F245A9D5310B764F165C37BADDC89B90B31F7E954A2070BA</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>https://opensource.org/licenses/MIT</url>
+        </license>
+      </licenses>
+      <purl>pkg:nuget/NDesk.Options.Redpoint@0.2.1</purl>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>NETStandard.Library</name>
+      <version>2.0.0</version>
+      <description>A set of standard .NET APIs that are prescribed to be used and supported together. 
+d318b764a689cfe285d8484bda918646905664e7 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">E3D64072B9CD9F9E86209C06A22688ECDA7070427C9A35327D2A9560824C0E1381CCF7BC1D21D2EF8B301761F4BFC7F38FBA712DF7188D2F4FE4F748AAC4D0C7</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>https://github.com/dotnet/standard/blob/master/LICENSE.TXT</url>
+        </license>
+      </licenses>
+      <copyright>.NET Foundation and Contributors</copyright>
+      <purl>pkg:nuget/NETStandard.Library@2.0.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>James Newton-King</publisher>
+      <name>Newtonsoft.Json</name>
+      <version>11.0.2</version>
+      <description>Json.NET is a popular high-performance JSON framework for .NET</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">CE76466F0B3B138040F63C4D67B16E888448DC2F61AE06AD5504932A121865834EB9DE0CE557C6953622E917583B9B10ADE6C5B85FE0F54115DE13B10CC5C5E9</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>https://raw.github.com/JamesNK/Newtonsoft.Json/master/LICENSE.md</url>
+        </license>
+      </licenses>
+      <copyright>Copyright © James Newton-King 2008</copyright>
+      <purl>pkg:nuget/Newtonsoft.Json@11.0.2</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://www.newtonsoft.com/json</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/JamesNK/Newtonsoft.Json.git</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>runtime.any.System.Collections</name>
+      <version>4.3.0</version>
+      <description>Internal implementation package not meant for direct consumption.  Please do not reference directly. 
+Provides classes that define generic collections, which allow developers to create strongly typed collections that provide better type safety and performance than non-generic strongly typed collections.
+
+Commonly Used Types:
+System.Collections.Generic.List&lt;T&gt;
+System.Collections.Generic.Dictionary&lt;TKey, TValue&gt;
+System.Collections.Generic.Queue&lt;T&gt;
+System.Collections.Generic.Stack&lt;T&gt;
+System.Collections.Generic.HashSet&lt;T&gt;
+System.Collections.Generic.LinkedList&lt;T&gt;
+System.Collections.Generic.EqualityComparer&lt;T&gt;
+System.Collections.Generic.Comparer&lt;T&gt;
+System.Collections.Generic.SortedDictionary&lt;TKey, TValue&gt;
+ 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">9F8833176C139B71A58694AE401C5AEC209A63227BE07C7AB559BEF772082BD1F6CC38BA2949CB1C8E5C5514AD9F4FF51859838DC2F28191F8BB7AE611A50239</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/runtime.any.System.Collections@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>runtime.any.System.Diagnostics.Tracing</name>
+      <version>4.3.0</version>
+      <description>Internal implementation package not meant for direct consumption.  Please do not reference directly. 
+Provides class that enable you to create high performance tracing events to be captured by event tracing for Windows (ETW).
+
+Commonly Used Types:
+System.Diagnostics.Tracing.EventSource
+System.Diagnostics.Tracing.EventListener
+System.Diagnostics.Tracing.EventLevel
+System.Diagnostics.Tracing.EventKeywords
+System.Diagnostics.Tracing.EventWrittenEventArgs
+System.Diagnostics.Tracing.EventAttribute
+System.Diagnostics.Tracing.EventSourceAttribute
+System.Diagnostics.Tracing.NonEventAttribute
+ 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">0B480D21E23C38965222BE7FA1E1A0C7E444CEBDF400D1DB8D3AC609F893B82D78C5D8B271DA61808B7B179DD6466A0090BD807FC2D35020F93A00F0213BB436</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/runtime.any.System.Diagnostics.Tracing@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>runtime.any.System.Globalization</name>
+      <version>4.3.0</version>
+      <description>Internal implementation package not meant for direct consumption.  Please do not reference directly. 
+Provides classes that define culture-related information, including language, country/region, calendars in use, format patterns for dates, currency, and numbers, and sort order for strings.
+
+Commonly Used Types:
+System.Globalization.DateTimeFormatInfo
+System.Globalization.CultureInfo
+System.Globalization.NumberFormatInfo
+System.Globalization.CalendarWeekRule
+System.Globalization.TextInfo
+System.Globalization.Calendar
+System.Globalization.CompareInfo
+System.Globalization.CompareOptions
+System.Globalization.UnicodeCategory
+ 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">3AAC1A076212FAE7D0AC81D2B5FDF216B064A1D890577307F89C9A4984C239838C3BDFAC4DEA052027DE090704839319231EEF49CE542F3E8BB2F85BA23D28DC</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/runtime.any.System.Globalization@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>runtime.any.System.Globalization.Calendars</name>
+      <version>4.3.0</version>
+      <description>Internal implementation package not meant for direct consumption.  Please do not reference directly. 
+Provides classes for performing date calculations using specific calendars, including the Gregorian, Julian, Hijri and Korean calendars.
+
+Commonly Used Types:
+System.Globalization.HijriCalendar
+System.Globalization.GregorianCalendar
+System.Globalization.HebrewCalendar
+System.Globalization.KoreanCalendar
+System.Globalization.ThaiBuddhistCalendar
+System.Globalization.TaiwanCalendar
+System.Globalization.JapaneseCalendar
+System.Globalization.GregorianCalendarTypes
+System.Globalization.PersianCalendar
+System.Globalization.UmAlQuraCalendar
+ 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">19053B502B7160AF6F6B0BC5B334A8D124F77F6B4418993294FB485D0BB318CD6E97CDBDA9BF8C9927366288413CAD7209C9D8156A5425A6320C453A8804FB3D</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/runtime.any.System.Globalization.Calendars@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>runtime.any.System.IO</name>
+      <version>4.3.0</version>
+      <description>Internal implementation package not meant for direct consumption.  Please do not reference directly. 
+Provides base input and output (I/O) types, including System.IO.Stream, System.IO.StreamReader and System.IO.StreamWriter, that allow reading and writing to data streams
+
+Commonly Used Types:
+System.IO.Stream
+System.IO.EndOfStreamException
+System.IO.MemoryStream
+System.IO.StreamReader
+System.IO.StreamWriter
+System.IO.StringWriter
+System.IO.TextWriter
+System.IO.TextReader
+ 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">7E0D4A238322D434A19AFC79EA988D3727C1687FDD5BCD1C4C39CB6201073CAABB924CC201C70545D60ACF8B94CDE8B783D0C268743E040C357D100677E4C5ED</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/runtime.any.System.IO@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>runtime.any.System.Reflection</name>
+      <version>4.3.0</version>
+      <description>Internal implementation package not meant for direct consumption.  Please do not reference directly. 
+Provides types that retrieve information about assemblies, modules, members, parameters, and other entities in managed code by examining their metadata. These types also can be used to manipulate instances of loaded types, for example to hook up events or to invoke methods.
+
+Commonly Used Types:
+System.Reflection.MethodInfo
+System.Reflection.PropertyInfo
+System.Reflection.ParameterInfo
+System.Reflection.FieldInfo
+System.Reflection.ConstructorInfo
+System.Reflection.Assembly
+System.Reflection.MemberInfo
+System.Reflection.EventInfo
+System.Reflection.Module
+ 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">293D3DD8BE87E1C5CD76ECE4ED64EBB5AE6B50BE95A39BEE401EEED64355E34641905F8C14392FBC3ACF8609F5D6FCA731F39CE7607962EB5951F09516480015</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/runtime.any.System.Reflection@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>runtime.any.System.Reflection.Extensions</name>
+      <version>4.3.0</version>
+      <description>Internal implementation package not meant for direct consumption.  Please do not reference directly. 
+Provides custom attribute extension methods for System.Reflection types.
+
+Commonly Used Types:
+System.Reflection.InterfaceMapping
+System.Reflection.CustomAttributeExtensions
+System.Reflection.RuntimeReflectionExtensions
+ 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">8DE7A4C53FC0324E766BFEC360342EE4A4B99A5975A9D61FAAB0A715EF71FF97AA83383A5A8AFFB354C02A4E2FBBB91E1B4AE6B282D2880108CB489F06ABA500</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/runtime.any.System.Reflection.Extensions@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>runtime.any.System.Reflection.Primitives</name>
+      <version>4.3.0</version>
+      <description>Internal implementation package not meant for direct consumption.  Please do not reference directly. 
+Provides common enumerations for reflection-based libraries.
+
+Commonly Used Types:
+System.Reflection.FieldAttributes
+System.Reflection.Emit.OpCode
+System.Reflection.TypeAttributes
+System.Reflection.MethodAttributes
+System.Reflection.CallingConventions
+System.Reflection.PropertyAttributes
+System.Reflection.EventAttributes
+System.Reflection.ParameterAttributes
+System.Reflection.GenericParameterAttributes
+System.Reflection.MethodImplAttributes
+ 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">A2F374276290AD9B799D3E49CD8FE7839C07B52F22894BCD77B9470841564319FB2EBBD7503E76FEEF42DB4E8A362AF8648CF0842A1CB0B5D9A60A58EF8B205E</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/runtime.any.System.Reflection.Primitives@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>runtime.any.System.Resources.ResourceManager</name>
+      <version>4.3.0</version>
+      <description>Internal implementation package not meant for direct consumption.  Please do not reference directly. 
+Provides classes and attributes that allow developers to create, store, and manage various culture-specific resources used in an application.
+
+Commonly Used Types:
+System.Resources.ResourceManager
+System.Resources.NeutralResourcesLanguageAttribute
+System.Resources.SatelliteContractVersionAttribute
+System.Resources.MissingManifestResourceException
+ 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">39FAB03CBADE2B3848D62E137313530C06B37216E24CD58C70ED6AE54BDAF9D9613A3B410375EE167C87FF935A558B1F8766EE016B8B244FDE99C38FCF42A49B</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/runtime.any.System.Resources.ResourceManager@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>runtime.any.System.Runtime</name>
+      <version>4.3.0</version>
+      <description>Internal implementation package not meant for direct consumption.  Please do not reference directly. 
+Provides the fundamental primitives, classes and base classes that define commonly-used value and reference data types, events and event handlers, interfaces, attributes, and exceptions. This packages represents the core package, and provides the minimal set of types required to build a managed application.
+
+Commonly Used Types:
+System.Object
+System.Exception
+System.Int16
+System.Int32
+System.Int64
+System.Enum
+System.String
+System.Char
+System.Boolean
+System.SByte
+System.Byte
+System.DateTime
+System.DateTimeOffset
+System.Single
+System.Double
+System.UInt16
+System.UInt32
+System.UInt64
+System.IDisposable
+System.Uri
+ 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">BFEE3C68312296860E5459AF5E770C2E9FCD4AC134361FD569A9CE1E6574B9AE3978AAD403F89639A4B5BAC8EE5BB0EE1B8EDB819E9A60F13CA5BD1812889BBD</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/runtime.any.System.Runtime@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>runtime.any.System.Runtime.Handles</name>
+      <version>4.3.0</version>
+      <description>Internal implementation package not meant for direct consumption.  Please do not reference directly. 
+Provides base classes, including System.Runtime.InteropServices.CriticalHandle and System.Runtime.InteropServices.SafeHandle, for types that represent operating system handles.
+
+Commonly Used Types:
+System.Runtime.InteropServices.SafeHandle
+Microsoft.Win32.SafeHandles.SafeWaitHandle
+System.Runtime.InteropServices.CriticalHandle
+System.Threading.WaitHandleExtensions
+System.IO.HandleInheritability
+ 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">95CDAE2867A2182535BD0F4D01DC3EFF70319DFF044B070AB7791FA2BF8688A69B00A279ED569B7F0C5F3E26BF705303DC344ECF7D1EA014C579436D8E7B7389</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/runtime.any.System.Runtime.Handles@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>runtime.any.System.Runtime.InteropServices</name>
+      <version>4.3.0</version>
+      <description>Internal implementation package not meant for direct consumption.  Please do not reference directly. 
+Provides types that support COM interop and platform invoke services.
+
+Commonly Used Types:
+System.Runtime.InteropServices.GCHandle
+System.Runtime.InteropServices.GuidAttribute
+System.Runtime.InteropServices.COMException
+System.DllNotFoundException
+System.Runtime.InteropServices.DllImportAttribute
+ 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">70EEB2469726D092BB95568E51BA5CFDD1CC07A9E65077E2B6DD5B7C8B164D4B45C749EF4A52F45928F63A27E8ACCDB83B861EA73C9AD3D42DC38E6AFDBD0E8C</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/runtime.any.System.Runtime.InteropServices@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>runtime.any.System.Text.Encoding</name>
+      <version>4.3.0</version>
+      <description>Internal implementation package not meant for direct consumption.  Please do not reference directly. 
+Provides base abstract encoding classes for converting blocks of characters to and from blocks of bytes.
+
+Commonly Used Types:
+System.Text.Encoding
+System.Text.DecoderFallbackException
+System.Text.Decoder
+System.Text.EncoderFallbackException
+System.Text.Encoder
+System.Text.EncoderFallback
+System.Text.EncoderFallbackBuffer
+System.Text.DecoderFallback
+System.Text.DecoderFallbackBuffer
+System.Text.DecoderExceptionFallback
+ 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">CBE6DF98ACD50E2251D3343620C408AF56CFE7C1979277A8EC65B5EEF093E93ED93C05980902A7152ED83302D5A625D7058921BAA7F446C5E67194FA4C06F20A</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/runtime.any.System.Text.Encoding@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>runtime.any.System.Text.Encoding.Extensions</name>
+      <version>4.3.0</version>
+      <description>Internal implementation package not meant for direct consumption.  Please do not reference directly. 
+Provides support for specific encodings, including ASCII, UTF-7, UTF-8, UTF-16, and UTF-32.
+
+Commonly Used Types:
+System.Text.UTF8Encoding
+System.Text.UnicodeEncoding
+System.Text.ASCIIEncoding
+System.Text.UTF7Encoding
+System.Text.UTF32Encoding
+ 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">656AA8BD9D7E19534964AC7B8405615F00359779E322D4CFE1F18C132FEC4A4F52C5588BFE61CEC9966A9142A73315F5D2B9E5A7C524B418364F0322B20961C3</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/runtime.any.System.Text.Encoding.Extensions@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>runtime.any.System.Threading.Tasks</name>
+      <version>4.3.0</version>
+      <description>Internal implementation package not meant for direct consumption.  Please do not reference directly. 
+Provides types that simplify the work of writing concurrent and asynchronous code.
+
+Commonly Used Types:
+System.Threading.Tasks.Task&lt;TResult&gt;
+System.Runtime.CompilerServices.TaskAwaiter&lt;TResult&gt;
+System.Threading.Tasks.TaskCompletionSource&lt;TResult&gt;
+System.Threading.Tasks.Task
+System.OperationCanceledException
+System.AggregateException
+ 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">5F37A56F5D6C7FC198C7EF76B822B85284F9D7D1C06583C26A698793ADE65DA1B273D5FB03C20BE1EB91A9C835F7122AD2775F4E51DFFB2758FABAC2A30F8C23</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/runtime.any.System.Threading.Tasks@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>runtime.debian.8-x64.runtime.native.System</name>
+      <version>4.3.0</version>
+      <description>Internal implementation package not meant for direct consumption.  Please do not reference directly. 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">D24EAF358C9A2B55572F16085BED1F0A49181EAAC278C15DBF02E7712E2D190697EB1A748E76FEEFCE7C92EFCE24F0B9DB0DB17E559019C399DD1B12A659895F</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/runtime.debian.8-x64.runtime.native.System@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>runtime.debian.8-x64.runtime.native.System.Net.Http</name>
+      <version>4.3.0</version>
+      <description>Internal implementation package not meant for direct consumption.  Please do not reference directly. 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">0C928E4CBAA1A465C5B2F0CBC4743780C253A5B7EBF43EBC5E399FAF6D50ED17A0F3071FE6077EEFDC08FCDF69FD0A35BC977F58894EEDD3AFEA93B447E8CA9C</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/runtime.debian.8-x64.runtime.native.System.Net.Http@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl</name>
+      <version>4.3.0</version>
+      <description>Internal implementation package not meant for direct consumption.  Please do not reference directly. 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>excluded</scope>
+      <hashes>
+        <hash alg="SHA-512">B2CF809FE50C4B46BD6F2372265CD3059622550123AFCEB5DBB2410906C07A7F47BAE4273584D29253D5E7A63A17C68C7BA0434608BBC8FD4D00E479B2F128FF</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>runtime.fedora.23-x64.runtime.native.System.Security.Cryptography.OpenSsl</name>
+      <version>4.3.0</version>
+      <description>Internal implementation package not meant for direct consumption.  Please do not reference directly. 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>excluded</scope>
+      <hashes>
+        <hash alg="SHA-512">FD8E32D7D3E9A465202E391B0AB8B95E212900879BC4D8AC22954FD2D0F98FA579E9D25F88885AC2A4BF1EBA755DB940F8D131250A3FFEC34DBE77431A379CAB</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/runtime.fedora.23-x64.runtime.native.System.Security.Cryptography.OpenSsl@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>runtime.fedora.24-x64.runtime.native.System.Security.Cryptography.OpenSsl</name>
+      <version>4.3.0</version>
+      <description>Internal implementation package not meant for direct consumption.  Please do not reference directly. 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>excluded</scope>
+      <hashes>
+        <hash alg="SHA-512">4AFAC5CC1734330A6103880E790D639E825BFB1B34DBD42083762C47DB5E5DAB6C03EFD16049AC03861D7D87746CAED09C7534241D51B7341D47BA6AF7E8DD31</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/runtime.fedora.24-x64.runtime.native.System.Security.Cryptography.OpenSsl@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>runtime.linux-x64.Microsoft.NETCore.App</name>
+      <version>2.0.0</version>
+      <description>Internal implementation package not meant for direct consumption.  Please do not reference directly. 
+A set of .NET API's that are included in the default .NET Core application model. 
+e8b8861ac7faf042c87a5c2f9f2d04c98b69f28d 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">7A77A32EBCABF8BB1EF986654695A1B336A0D7D795808E6BCA08E7F3B9C2F6C61ED04AA264BC003870E032955FE9A666F665A5EB8EB442D3D9438C8AFFCC7F87</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>https://github.com/dotnet/core-setup/blob/master/LICENSE.TXT</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/runtime.linux-x64.Microsoft.NETCore.App@2.0.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>runtime.linux-x64.Microsoft.NETCore.DotNetAppHost</name>
+      <version>2.0.0</version>
+      <description>Internal implementation package not meant for direct consumption.  Please do not reference directly. 
+Provides the .NET Core app bootstrapper intended for use in the application directory 
+e8b8861ac7faf042c87a5c2f9f2d04c98b69f28d 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">F6432B9E0256F41A117E6B5F360D84D96FFBDAFAF1B66F1D3826058A3D5F9F7DDBA04B739EB4FCBE17317D4E52D49884E4CBADB29A6E96E3FB4618DF46405803</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>https://github.com/dotnet/core-setup/blob/master/LICENSE.TXT</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/runtime.linux-x64.Microsoft.NETCore.DotNetAppHost@2.0.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>runtime.linux-x64.Microsoft.NETCore.DotNetHostPolicy</name>
+      <version>2.0.0</version>
+      <description>Internal implementation package not meant for direct consumption.  Please do not reference directly. 
+Provides a CoreCLR hosting policy implementation -- configuration settings, assembly paths and assembly servicing 
+e8b8861ac7faf042c87a5c2f9f2d04c98b69f28d 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">462773CD2F2A3C63677C35E15F2255FE10FFB14275DC0C5F81A7E2BDB7AAB93590973904B7BB01E3020EF51C7ED2880433565FBE5CB8AA261F2E1719795FECE6</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>https://github.com/dotnet/core-setup/blob/master/LICENSE.TXT</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/runtime.linux-x64.Microsoft.NETCore.DotNetHostPolicy@2.0.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>runtime.linux-x64.Microsoft.NETCore.DotNetHostResolver</name>
+      <version>2.0.0</version>
+      <description>Internal implementation package not meant for direct consumption.  Please do not reference directly. 
+Provides an implementation of framework resolution strategy used by Microsoft.NETCore.DotNetHost 
+e8b8861ac7faf042c87a5c2f9f2d04c98b69f28d 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">2B89EFB7156DB8AC78C656D171BC5CD92DFD023AC6D5D3AB1390F87957CCAFD65D946B620EC6B2FBE3B22DC0D509C4A077E48B5D96C5D7436CEFB5F0D9D3F47E</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>https://github.com/dotnet/core-setup/blob/master/LICENSE.TXT</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/runtime.linux-x64.Microsoft.NETCore.DotNetHostResolver@2.0.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>runtime.native.System</name>
+      <version>4.3.0</version>
+      <description>Internal implementation package not meant for direct consumption.  Please do not reference directly. 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">299C5A96FFFDCAF1972E3E3D1C727837D18AC9E88CB79C09914F12FF1DE7280DFF10C9232A49A1C1D3BA7785A5CF76F28C9DCE414F0A2A567688DE7FD5331DC8</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/runtime.native.System@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>runtime.native.System.Net.Http</name>
+      <version>4.3.0</version>
+      <description>Internal implementation package not meant for direct consumption.  Please do not reference directly. 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">DDD1E5B67545477F7C72B5883666DE40E89EFB0836D91E7A349E2F3D4AC05CE1125E6ADD3CB09C39CBDFE7AB7C5DC8FDAEAF6AC25ACD92F6DE3D8CE2D6DB7918</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/runtime.native.System.Net.Http@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>runtime.native.System.Security.Cryptography.Apple</name>
+      <version>4.3.0</version>
+      <description>Internal implementation package not meant for direct consumption.  Please do not reference directly. 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">23C6A99B323CD71CDCB28C6FAA71F099F69FF0972D5125607AE8BBC99BA7C08513571D14526E8C2805AB3A8B70D3D3A6DD76DFA193320393ECB05906EE91F37D</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/runtime.native.System.Security.Cryptography.Apple@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>runtime.native.System.Security.Cryptography.OpenSsl</name>
+      <version>4.3.0</version>
+      <description>Internal implementation package not meant for direct consumption.  Please do not reference directly. 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">EE5D047908B99B776FF9BB54856454B24B09A0F9271B127239543B1F5FAA3381A032D9EEB4D813D01B5A4B7D183B6A16250F159FDC450D5314A7EACE1550BEA3</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/runtime.native.System.Security.Cryptography.OpenSsl@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>runtime.opensuse.13.2-x64.runtime.native.System.Security.Cryptography.OpenSsl</name>
+      <version>4.3.0</version>
+      <description>Internal implementation package not meant for direct consumption.  Please do not reference directly. 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>excluded</scope>
+      <hashes>
+        <hash alg="SHA-512">81BDB93C1C86C560343DF6CC367499FB2A01A9B3016617BE416874A23C4355A8D95C7BE34F175510F3FDEA4872302A87C8EFAB98A328DFA39422DB520C3F291C</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/runtime.opensuse.13.2-x64.runtime.native.System.Security.Cryptography.OpenSsl@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>runtime.opensuse.42.1-x64.runtime.native.System.Security.Cryptography.OpenSsl</name>
+      <version>4.3.0</version>
+      <description>Internal implementation package not meant for direct consumption.  Please do not reference directly. 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>excluded</scope>
+      <hashes>
+        <hash alg="SHA-512">6DE9544B4DA49F127680CF5B3B4AFEA96BFCAC3293038A1B0A12EEA0AD60BE368AF31EE1DFD66D48D458B40200738C04AA0C71ADCC54AE2DDDBEA2CD50D6F28D</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/runtime.opensuse.42.1-x64.runtime.native.System.Security.Cryptography.OpenSsl@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>runtime.osx-x64.Microsoft.NETCore.App</name>
+      <version>2.0.0</version>
+      <description>Internal implementation package not meant for direct consumption.  Please do not reference directly. 
+A set of .NET API's that are included in the default .NET Core application model. 
+e8b8861ac7faf042c87a5c2f9f2d04c98b69f28d 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">73793AF8E11C191D01DE946533A678248FF7E2B255FCED8CC693F5C8ED21216C24E1AB69DFFBB92F24CDDFC282321A697FDD07122EA35070667096D4DA7ABF44</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>https://github.com/dotnet/core-setup/blob/master/LICENSE.TXT</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/runtime.osx-x64.Microsoft.NETCore.App@2.0.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>runtime.osx-x64.Microsoft.NETCore.DotNetAppHost</name>
+      <version>2.0.0</version>
+      <description>Internal implementation package not meant for direct consumption.  Please do not reference directly. 
+Provides the .NET Core app bootstrapper intended for use in the application directory 
+e8b8861ac7faf042c87a5c2f9f2d04c98b69f28d 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">845FE355EFED6B21E02F7DB00F5ED58FEBB05549432059DCBA86E5ED9D213DA6F726153334BF38247BA8FABA02737D7822E545549E9D34007C51760A1C61F7C9</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>https://github.com/dotnet/core-setup/blob/master/LICENSE.TXT</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/runtime.osx-x64.Microsoft.NETCore.DotNetAppHost@2.0.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>runtime.osx-x64.Microsoft.NETCore.DotNetHostPolicy</name>
+      <version>2.0.0</version>
+      <description>Internal implementation package not meant for direct consumption.  Please do not reference directly. 
+Provides a CoreCLR hosting policy implementation -- configuration settings, assembly paths and assembly servicing 
+e8b8861ac7faf042c87a5c2f9f2d04c98b69f28d 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">8F3C4D941F6557AFE2786F4A6C4E5196B122D79D6F3BD598442A05715F6C2E91AF5FD74066028FD3BFE56D99ED604D33FA7339AA83325D7DE6D92760C0655F28</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>https://github.com/dotnet/core-setup/blob/master/LICENSE.TXT</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/runtime.osx-x64.Microsoft.NETCore.DotNetHostPolicy@2.0.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>runtime.osx-x64.Microsoft.NETCore.DotNetHostResolver</name>
+      <version>2.0.0</version>
+      <description>Internal implementation package not meant for direct consumption.  Please do not reference directly. 
+Provides an implementation of framework resolution strategy used by Microsoft.NETCore.DotNetHost 
+e8b8861ac7faf042c87a5c2f9f2d04c98b69f28d 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">17591CE055DBF9E3672F9C300F8512D3CBE0076FB8AE1C92B4A8AED898262033A6C44C481B81CC259F3EBE5F0CC747E42A06381A69019EF3958788ECBE122BBA</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>https://github.com/dotnet/core-setup/blob/master/LICENSE.TXT</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/runtime.osx-x64.Microsoft.NETCore.DotNetHostResolver@2.0.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>runtime.osx.10.10-x64.runtime.native.System</name>
+      <version>4.3.0</version>
+      <description>Internal implementation package not meant for direct consumption.  Please do not reference directly. 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">99A0A0EB5227F448CAB94CE7DA3E92421B9E0E641D7B0B62BE30AF2A66B6B8040668F48170F01486A1EA7F10D632C273A325DED84D3D75CF0F17EA6B7FF50A42</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/runtime.osx.10.10-x64.runtime.native.System@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>runtime.osx.10.10-x64.runtime.native.System.Net.Http</name>
+      <version>4.3.0</version>
+      <description>Internal implementation package not meant for direct consumption.  Please do not reference directly. 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">F47A487DAEDA9A6287086AECE43B6DFD83348CD586F608F06D08BCB963FE8BADC4DE1CF9906213F2B84FC97771A90C7A9FDA2C90DAAC3039EA35336375A61313</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/runtime.osx.10.10-x64.runtime.native.System.Net.Http@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.Apple</name>
+      <version>4.3.0</version>
+      <description>Internal implementation package not meant for direct consumption.  Please do not reference directly. 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>excluded</scope>
+      <hashes>
+        <hash alg="SHA-512">9929942914071E0EA0944A952FF9AD3C296BE39E719A2F4BB3EAC298D41829B4468B332FBA880EBE242871A02145E1C26DC7660021375D12C7EFCAE4D200278A</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.Apple@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.OpenSsl</name>
+      <version>4.3.0</version>
+      <description>Internal implementation package not meant for direct consumption.  Please do not reference directly. 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>excluded</scope>
+      <hashes>
+        <hash alg="SHA-512">61DA1667A5DD1E53A5D19FBE90ABBFE332D84FE755FB811A080668A47D41A97DB44539E3174FD1D2A0770FF1BD83AFA68C82CE06DF5775DA65A6054CCC12C4BE</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.OpenSsl@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>runtime.rhel.7-x64.runtime.native.System.Security.Cryptography.OpenSsl</name>
+      <version>4.3.0</version>
+      <description>Internal implementation package not meant for direct consumption.  Please do not reference directly. 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>excluded</scope>
+      <hashes>
+        <hash alg="SHA-512">E65A6A1F1928CFB760C395A399542DC7F9087399C53874376604504AE60ABD2DA24ED735EBD148D335000A5E35C8108EA55404685E902DF392EAC2E8D38FB665</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/runtime.rhel.7-x64.runtime.native.System.Security.Cryptography.OpenSsl@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl</name>
+      <version>4.3.0</version>
+      <description>Internal implementation package not meant for direct consumption.  Please do not reference directly. 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>excluded</scope>
+      <hashes>
+        <hash alg="SHA-512">C9F219515E268CF40E16B135BD64CBA95C35E866DD9BC34954159562314D01D2F9EA7EB8B0DB94ACF6BDAC83D651D90BAD7890CB657FFE40FA3440EC662C9944</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>runtime.ubuntu.16.04-x64.runtime.native.System.Security.Cryptography.OpenSsl</name>
+      <version>4.3.0</version>
+      <description>Internal implementation package not meant for direct consumption.  Please do not reference directly. 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>excluded</scope>
+      <hashes>
+        <hash alg="SHA-512">4981B2D7A106703B185E176AD35BFDA149156F3B752778FA71C56B3686407765FD2B6625DE352BD563AAC1E1E8769D7886CC59A0D5D0BFB41ED60277360BEB81</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/runtime.ubuntu.16.04-x64.runtime.native.System.Security.Cryptography.OpenSsl@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>runtime.ubuntu.16.10-x64.runtime.native.System.Security.Cryptography.OpenSsl</name>
+      <version>4.3.0</version>
+      <description>Internal implementation package not meant for direct consumption.  Please do not reference directly. 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>excluded</scope>
+      <hashes>
+        <hash alg="SHA-512">5DBE6BC007A9B46491E5299602291F5DBF8CC8D51E6C1B08DB2FA0EFD365990B41B6E181ED6BF82E873A659396427BC0E33E85B47D645D273FEF8BF8EC643631</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/runtime.ubuntu.16.10-x64.runtime.native.System.Security.Cryptography.OpenSsl@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>runtime.unix.Microsoft.Win32.Primitives</name>
+      <version>4.3.0</version>
+      <description>Internal implementation package not meant for direct consumption.  Please do not reference directly. 
+Provides common types for Win32-based libraries.
+
+Commonly Used Types:
+System.ComponentModel.Win32Exception
+ 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">93E6D3DB61F9C2CA2048F25990DDA92ACD5EC74561E0C776D2C6DD8D1D55128F2C953F33D6832FB6A72BD9EDCA304A2551085BDEAFE6E18AF87619C9BA943C32</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/runtime.unix.Microsoft.Win32.Primitives@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>runtime.unix.System.Diagnostics.Debug</name>
+      <version>4.3.0</version>
+      <description>Internal implementation package not meant for direct consumption.  Please do not reference directly. 
+Provides classes and attributes that allows basic interaction with a debugger.
+
+Commonly Used Types:
+System.Diagnostics.Debug
+System.Diagnostics.DebuggerStepThroughAttribute
+System.Diagnostics.Debugger
+System.Diagnostics.DebuggerDisplayAttribute
+System.Diagnostics.DebuggerBrowsableAttribute
+System.Diagnostics.DebuggerBrowsableState
+System.Diagnostics.DebuggerHiddenAttribute
+System.Diagnostics.DebuggerNonUserCodeAttribute
+System.Diagnostics.DebuggerTypeProxyAttribute
+ 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">A8CE331953B1F4424AA7F4B6DFEDFCE9AD138940BC92F332DE2BC6D05185830EC6EB832E752F62EAF425F749CAADD4EA1789121CB7ED79740FA5868EBA55C838</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/runtime.unix.System.Diagnostics.Debug@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>runtime.unix.System.IO.FileSystem</name>
+      <version>4.3.0</version>
+      <description>Internal implementation package not meant for direct consumption.  Please do not reference directly. 
+Provides types that allow reading and writing to files and types that provide basic file and directory support.
+
+Commonly Used Types:
+System.IO.FileStream
+System.IO.FileInfo
+System.IO.DirectoryInfo
+System.IO.FileSystemInfo
+System.IO.File
+System.IO.Directory
+System.IO.SearchOption
+System.IO.FileOptions
+ 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">6D4C80ACEFFAC60E1560FDA34C5984BBFA2E1BD106BDE2C6D3540905CC30C58E6F5F2EAF5703CEF5E68E3D25A4B97982193B2DB8130A50C622A498E43EB9BDCA</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/runtime.unix.System.IO.FileSystem@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>runtime.unix.System.Net.Primitives</name>
+      <version>4.3.0</version>
+      <description>Internal implementation package not meant for direct consumption.  Please do not reference directly. 
+Provides common types for network-based libraries, including System.Net.IPAddress, System.Net.IPEndPoint, and System.Net.CookieContainer.
+
+Commonly Used Types:
+System.Net.HttpStatusCode
+System.Net.Sockets.SocketError
+System.Net.Cookie
+System.Net.Sockets.SocketException
+System.Net.IPEndPoint
+System.Net.ICredentials
+System.Net.NetworkCredential
+System.Net.IPAddress
+System.Net.CookieCollection
+System.Net.CookieContainer
+ 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">C2A0ECF5C72B226B4776EB6281F00267827D6086A0AD758EBF6E6C64A1C148D2056FE99C87AB4207ADD5FA67F1DB73DD1ED3DCA81141FC896BE6B6E98795C97E</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/runtime.unix.System.Net.Primitives@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>runtime.unix.System.Private.Uri</name>
+      <version>4.3.0</version>
+      <description>Internal implementation package not meant for direct consumption.  Please do not reference directly. 
+Internal implementation package not meant for direct consumption.  Please do not reference directly.  Provides implementation of System.Uri. 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">203EBE272791D79AB0C40AFE9D0543852EE91B9FB4AE5BC15524D97728BC8BC9D7E0CBCF65D1FAB8CFB0AA7A4AE37E7938933EEF127AA5EA46F60E57B6AD2D91</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/runtime.unix.System.Private.Uri@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>runtime.unix.System.Runtime.Extensions</name>
+      <version>4.3.0</version>
+      <description>Internal implementation package not meant for direct consumption.  Please do not reference directly. 
+Provides commonly-used classes for performing mathematical functions, conversions, string comparisons and querying environment information.
+
+Commonly Used Types:
+System.Math
+System.Environment
+System.Random
+System.Progress&lt;T&gt;
+System.Convert
+System.Diagnostics.Stopwatch
+System.Runtime.Versioning.FrameworkName
+System.StringComparer
+System.IO.Path
+ 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">54B81784C08E934389C59E6E155AF6B1855E4BBC41678B01A702C94E6DABA87C6DDFD16FE9E2CB61F3097BFA4950DBC37781454D027CE5BA6C50A393CC91B888</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/runtime.unix.System.Runtime.Extensions@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>runtime.win-x64.Microsoft.NETCore.App</name>
+      <version>2.0.0</version>
+      <description>Internal implementation package not meant for direct consumption.  Please do not reference directly. 
+A set of .NET API's that are included in the default .NET Core application model. 
+e8b8861ac7faf042c87a5c2f9f2d04c98b69f28d 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">2BF65EEFD853A55C9E7644ED2A643DF7DBEAD2E9CD187BFC39EA2488053DC019F2523A2D74FE1AD0F43054313B024C3309D4950D4407D5348FB30A5CA2124BE4</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>https://github.com/dotnet/core-setup/blob/master/LICENSE.TXT</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/runtime.win-x64.Microsoft.NETCore.App@2.0.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>runtime.win-x64.Microsoft.NETCore.DotNetAppHost</name>
+      <version>2.0.0</version>
+      <description>Internal implementation package not meant for direct consumption.  Please do not reference directly. 
+Provides the .NET Core app bootstrapper intended for use in the application directory 
+e8b8861ac7faf042c87a5c2f9f2d04c98b69f28d 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">4467D8B1849BBEC285CF62FB5EF61B3C4000B283748AABDB1206376F69E60F36E93D9E0BA1E4303E28C639A5E384C2581AB36B9700F162A486F8C8CC919222F9</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>https://github.com/dotnet/core-setup/blob/master/LICENSE.TXT</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/runtime.win-x64.Microsoft.NETCore.DotNetAppHost@2.0.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>runtime.win-x64.Microsoft.NETCore.DotNetHostPolicy</name>
+      <version>2.0.0</version>
+      <description>Internal implementation package not meant for direct consumption.  Please do not reference directly. 
+Provides a CoreCLR hosting policy implementation -- configuration settings, assembly paths and assembly servicing 
+e8b8861ac7faf042c87a5c2f9f2d04c98b69f28d 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">7752A0CBF24E0DCCFD010358E0EF2DFC3FDF048EE2550F8CD65A5A9DD94F73391568CC425CC88B5F5C9EFDAAADD077D396B38F61665DE87099C6EC967C44263F</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>https://github.com/dotnet/core-setup/blob/master/LICENSE.TXT</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/runtime.win-x64.Microsoft.NETCore.DotNetHostPolicy@2.0.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>runtime.win-x64.Microsoft.NETCore.DotNetHostResolver</name>
+      <version>2.0.0</version>
+      <description>Internal implementation package not meant for direct consumption.  Please do not reference directly. 
+Provides an implementation of framework resolution strategy used by Microsoft.NETCore.DotNetHost 
+e8b8861ac7faf042c87a5c2f9f2d04c98b69f28d 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">B4B7DF42A0926BE6D46A7044D81B8EF3F38BC2DBCF32D2F1328C1A354FF8E520F8C6EA369D83712B5C2FD6353D9A80CDAC9EA9EC47E8DA4E6FF3AAFC01D31C62</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>https://github.com/dotnet/core-setup/blob/master/LICENSE.TXT</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/runtime.win-x64.Microsoft.NETCore.DotNetHostResolver@2.0.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>runtime.win.Microsoft.Win32.Primitives</name>
+      <version>4.3.0</version>
+      <description>Internal implementation package not meant for direct consumption.  Please do not reference directly. 
+Provides common types for Win32-based libraries.
+
+Commonly Used Types:
+System.ComponentModel.Win32Exception
+ 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">36576ACAAFA80DCDF3DAD082E37CCFBBD3175CD622992B0DD1C690D1CB575A1F7AEF44894DCCD2E89D34C6027A26DE502843128982ADCB7150644F51F1480935</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/runtime.win.Microsoft.Win32.Primitives@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>runtime.win.System.Diagnostics.Debug</name>
+      <version>4.3.0</version>
+      <description>Internal implementation package not meant for direct consumption.  Please do not reference directly. 
+Provides classes and attributes that allows basic interaction with a debugger.
+
+Commonly Used Types:
+System.Diagnostics.Debug
+System.Diagnostics.DebuggerStepThroughAttribute
+System.Diagnostics.Debugger
+System.Diagnostics.DebuggerDisplayAttribute
+System.Diagnostics.DebuggerBrowsableAttribute
+System.Diagnostics.DebuggerBrowsableState
+System.Diagnostics.DebuggerHiddenAttribute
+System.Diagnostics.DebuggerNonUserCodeAttribute
+System.Diagnostics.DebuggerTypeProxyAttribute
+ 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">A11BEE46985198D0CF9717B99DFB1E92A22875AD5555C175562E53B81797CE4B70FBA8AD0620B64B6BE9EF9A9584D17BFFE6597785010BDDDDE87E1EA27CE7F4</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/runtime.win.System.Diagnostics.Debug@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>runtime.win.System.IO.FileSystem</name>
+      <version>4.3.0</version>
+      <description>Internal implementation package not meant for direct consumption.  Please do not reference directly. 
+Provides types that allow reading and writing to files and types that provide basic file and directory support.
+
+Commonly Used Types:
+System.IO.FileStream
+System.IO.FileInfo
+System.IO.DirectoryInfo
+System.IO.FileSystemInfo
+System.IO.File
+System.IO.Directory
+System.IO.SearchOption
+System.IO.FileOptions
+ 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">17B4A6725A2E10E9D413A803130CDBBD6ABD2BF94596E68C02B15E2500FE2D4BBBC34C50F1BB9576FD91D16AE11B219EAB9F470DF711A03E0972D3E9162893F9</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/runtime.win.System.IO.FileSystem@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>runtime.win.System.Net.Primitives</name>
+      <version>4.3.0</version>
+      <description>Internal implementation package not meant for direct consumption.  Please do not reference directly. 
+Provides common types for network-based libraries, including System.Net.IPAddress, System.Net.IPEndPoint, and System.Net.CookieContainer.
+
+Commonly Used Types:
+System.Net.HttpStatusCode
+System.Net.Sockets.SocketError
+System.Net.Cookie
+System.Net.Sockets.SocketException
+System.Net.IPEndPoint
+System.Net.ICredentials
+System.Net.NetworkCredential
+System.Net.IPAddress
+System.Net.CookieCollection
+System.Net.CookieContainer
+ 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">FBE0502089649DF4A7E6E268F0B4270C5668F49D604CE04CBAD1AB1932B4C0415C888469BAD664669A1320769D8E14445BFCE96111FC3D6079115F6FBA1416E2</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/runtime.win.System.Net.Primitives@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>runtime.win.System.Runtime.Extensions</name>
+      <version>4.3.0</version>
+      <description>Internal implementation package not meant for direct consumption.  Please do not reference directly. 
+Provides commonly-used classes for performing mathematical functions, conversions, string comparisons and querying environment information.
+
+Commonly Used Types:
+System.Math
+System.Environment
+System.Random
+System.Progress&lt;T&gt;
+System.Convert
+System.Diagnostics.Stopwatch
+System.Runtime.Versioning.FrameworkName
+System.StringComparer
+System.IO.Path
+ 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">F8DDCE885541079B78AD27C1D4D53DF5B78C976D6395A52CCA6777606F0B8327DAE6CAA617E269034FB8100AB8964F60117708A25DEF4191E5C6C7C18E043B25</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/runtime.win.System.Runtime.Extensions@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>runtime.win7.System.Private.Uri</name>
+      <version>4.3.0</version>
+      <description>Internal implementation package not meant for direct consumption.  Please do not reference directly. 
+Internal implementation package not meant for direct consumption.  Please do not reference directly.  Provides implementation of System.Uri. 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">4FD1C04141E6EE4F5FE0A906E7362651AFD5CB995CD9FCD1049927A732B071F827BB962DF1EA4F3630F3C4E928A0C1911FD82C838E654208C771DEE6398ABB3D</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/runtime.win7.System.Private.Uri@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Nicholas Blumhardt and Contributors</publisher>
+      <name>Sprache</name>
+      <version>1.10.0.35</version>
+      <description>Sprache is a simple, lightweight library for constructing parsers directly in C# code.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">517BCA5B0927EA9A0855CFFB2E4ABDF8FC1EABB2CA0C623D4AF0A7ADCC589B48AAA97038F2C71AE79AD789B652C2DA2EE6B0C46E853EDBC4DBA5F4D534F98260</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>https://github.com/sprache/Sprache/blob/master/licence.txt</url>
+        </license>
+      </licenses>
+      <copyright>Copyright Sprache Contributors 2013</copyright>
+      <purl>pkg:nuget/Sprache@1.10.0.35</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://github.com/sprache/Sprache</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>System.Buffers</name>
+      <version>4.3.0</version>
+      <description>Provides resource pooling of any type for performance-critical applications that allocate and deallocate objects frequently.
+
+Commonly Used Types:
+System.Buffers.ArrayPool&lt;T&gt;
+ 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">3DCBF66F6EDF7E9BB4F698CDDCF81B9D059811D84E05C7AC618B2640EFED642F089B0EF84C927C5F58FEFFE43BB96A6BCF4FEC422529B82998B18D70E4648CBE</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/System.Buffers@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>System.Collections</name>
+      <version>4.3.0</version>
+      <description>Provides classes that define generic collections, which allow developers to create strongly typed collections that provide better type safety and performance than non-generic strongly typed collections.
+
+Commonly Used Types:
+System.Collections.Generic.List&lt;T&gt;
+System.Collections.Generic.Dictionary&lt;TKey, TValue&gt;
+System.Collections.Generic.Queue&lt;T&gt;
+System.Collections.Generic.Stack&lt;T&gt;
+System.Collections.Generic.HashSet&lt;T&gt;
+System.Collections.Generic.LinkedList&lt;T&gt;
+System.Collections.Generic.EqualityComparer&lt;T&gt;
+System.Collections.Generic.Comparer&lt;T&gt;
+System.Collections.Generic.SortedDictionary&lt;TKey, TValue&gt;
+ 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">CA7B952D30DA1487CA4E43AA522817B5EE26E7E10537062810112FC67A7512766C39D402F394BB0426D1108BBCF9BBB64E9CE1F5AF736EF215A51A35E55F051B</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/System.Collections@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>System.Collections.Concurrent</name>
+      <version>4.3.0</version>
+      <description>Provides several thread-safe collection classes that should be used in place of the corresponding types in the System.Collections.NonGeneric and System.Collections packages whenever multiple threads are accessing the collection concurrently.
+
+Commonly Used Types:
+System.Collections.Concurrent.ConcurrentDictionary&lt;TKey, TValue&gt;
+System.Collections.Concurrent.ConcurrentQueue&lt;T&gt;
+System.Collections.Concurrent.ConcurrentBag&lt;T&gt;
+System.Collections.Concurrent.BlockingCollection&lt;T&gt;
+System.Collections.Concurrent.ConcurrentStack&lt;T&gt;
+ 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">35C1AA3E636216FE5DC2EBEB504293E69AD6355D26E22453AF060AF94D8279FAA93BDCFE127AECB0B316C7E7D9185BCAC72E994984EFDB7F2D8515F1F55CF682</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/System.Collections.Concurrent@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>System.Collections.NonGeneric</name>
+      <version>4.3.0</version>
+      <description>Provides classes that define older non-generic collections of objects, such as lists, queues, hash tables and dictionaries. Developers should prefer the generic collections in the System.Collections package.
+
+Commonly Used Types:
+System.Collections.ArrayList
+System.Collections.Hashtable
+System.Collections.CollectionBase
+System.Collections.ReadOnlyCollectionBase
+System.Collections.Stack
+System.Collections.SortedList
+System.Collections.DictionaryBase
+System.Collections.Queue
+System.Collections.Comparer
+System.Collections.CaseInsensitiveComparer
+ 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">DC6ABFE778B3EA08E99F50B79112A51728E689F353B082234351B9F5B1BE4B601A0B6D38A04C2138D05B5BDD83D6F3D91B53EE86ED119225C15E4683C38BF98C</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/System.Collections.NonGeneric@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>System.Collections.Specialized</name>
+      <version>4.3.0</version>
+      <description>Provides older specialized non-generic collections; for example, a linked list dictionary, a bit vector, and collections that contain only strings.
+
+Commonly Used Types:
+System.Collections.Specialized.NameValueCollection
+System.Collections.Specialized.NameObjectCollectionBase
+System.Collections.Specialized.StringCollection
+System.Collections.Specialized.IOrderedDictionary
+System.Collections.Specialized.HybridDictionary
+System.Collections.Specialized.OrderedDictionary
+System.Collections.Specialized.ListDictionary
+System.Collections.Specialized.StringDictionary
+System.Collections.Specialized.BitVector32
+ 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">C7A257CBDA812D6C0C44B29D8BB5CC4F5CF2D3CB81574EB1DC94A7EFDE980AC26C5FFADB7CC3521FE7B19437766A046C83CBF2E7EA59A36435C288ADD8142B57</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/System.Collections.Specialized@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>System.ComponentModel</name>
+      <version>4.3.0</version>
+      <description>Provides interfaces for the editing and change tracking of objects used as data sources.
+
+Commonly Used Types:
+System.ComponentModel.CancelEventArgs
+System.IServiceProvider
+System.ComponentModel.IEditableObject
+System.ComponentModel.IChangeTracking
+System.ComponentModel.IRevertibleChangeTracking
+ 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">7C638AC92A132E1553A089C6A711FFB7431B22FECCA322CE748D6684AE2BAAF161BAB2F71704750BD15EC6FDA11E795F2AB8491AC769B89341BDE77AA9212D59</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/System.ComponentModel@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>System.ComponentModel.Primitives</name>
+      <version>4.3.0</version>
+      <description>Provides interfaces that are used to implement the run-time and design-time behavior of components.
+
+Commonly Used Types:
+System.ComponentModel.IComponent
+System.ComponentModel.IContainer
+System.ComponentModel.ISite
+System.ComponentModel.ComponentCollection
+ 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">AB26D413ABCE9CFC31B860765D91B21D4048976016D853CE8969F7BA79C039D8846B3C4E2986530F20B62DCB23FF0A769AE5EE37FC078D69EAA962832F2035EF</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/System.ComponentModel.Primitives@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>System.ComponentModel.TypeConverter</name>
+      <version>4.3.0</version>
+      <description>Provides the System.ComponentModel.TypeConverter class, which represents a unified way of converting types of values to other types.
+
+Commonly Used Types:
+System.ComponentModel.TypeConverter
+System.ComponentModel.TypeConverterAttribute
+System.ComponentModel.PropertyDescriptor
+System.ComponentModel.StringConverter
+System.ComponentModel.ITypeDescriptorContext
+System.ComponentModel.EnumConverter
+System.ComponentModel.TypeDescriptor
+System.ComponentModel.Int32Converter
+System.ComponentModel.BooleanConverter
+System.ComponentModel.DoubleConverter
+ 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">0A2B2F3C25DE4A6429C6CB9FBB37409E86168921EA71EC58889912742E39E1B67F5CBE764AFFC3580AA0EF167C7F73A55332A0ABF7B043E89185293029D8B087</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/System.ComponentModel.TypeConverter@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>System.Configuration.ConfigurationManager</name>
+      <version>4.4.0</version>
+      <description>Provides types that support using configuration files.
+
+Commonly Used Types:
+System.Configuration.Configuration
+System.Configuration.ConfigurationManager
+ 
+8321c729934c0f8be754953439b88e6e1c120c24 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">44B601DD83A6773F5D137CCC841146BF7185EF8BA91A31F49C5D06F6514544B34BB0210C2298AE42C306BF6A84D2A769D4976179534EF11211A5429DA2488AFA</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>https://github.com/dotnet/corefx/blob/master/LICENSE.TXT</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/System.Configuration.ConfigurationManager@4.4.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>SQLite Development Team</publisher>
+      <name>System.Data.SQLite</name>
+      <version>1.0.110</version>
+      <description>The official SQLite database engine for both x86 and x64 along with the ADO.NET provider.  This package includes support for LINQ and Entity Framework 6.</description>
+      <scope>excluded</scope>
+      <hashes>
+        <hash alg="SHA-512">605501438073C732E1ABF4CE560F308A917E61BA451EB7CCC75764860A5F4C3B222E7A6DFF6A2A466234B62E3CACD84D8D1D193D6E532C274D038CEB1E2372D2</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>https://www.sqlite.org/copyright.html</url>
+        </license>
+      </licenses>
+      <copyright>Public Domain</copyright>
+      <purl>pkg:nuget/System.Data.SQLite@1.0.110</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://system.data.sqlite.org/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>SQLite Development Team</publisher>
+      <name>System.Data.SQLite.Core</name>
+      <version>1.0.110</version>
+      <description>The official SQLite database engine for both x86 and x64 along with the ADO.NET provider.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">C7BC59D28056C9C25C87D4A1005C134113C9D87128E4D997CA1C7F2C526F49B0814155E71DCF6B20078BA35557CC315B7DBB4F9771C5A4586B8849D4912D8BD1</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>https://www.sqlite.org/copyright.html</url>
+        </license>
+      </licenses>
+      <copyright>Public Domain</copyright>
+      <purl>pkg:nuget/System.Data.SQLite.Core@1.0.110</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://system.data.sqlite.org/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>System.Diagnostics.Debug</name>
+      <version>4.3.0</version>
+      <description>Provides classes and attributes that allows basic interaction with a debugger.
+
+Commonly Used Types:
+System.Diagnostics.Debug
+System.Diagnostics.DebuggerStepThroughAttribute
+System.Diagnostics.Debugger
+System.Diagnostics.DebuggerDisplayAttribute
+System.Diagnostics.DebuggerBrowsableAttribute
+System.Diagnostics.DebuggerBrowsableState
+System.Diagnostics.DebuggerHiddenAttribute
+System.Diagnostics.DebuggerNonUserCodeAttribute
+System.Diagnostics.DebuggerTypeProxyAttribute
+ 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">6C58FE1E3618E7F87684C1CEA7EFC7D3B19BD7DF8D2535F9E27B62C52F441F11B67B21225D6BCD62F409E02C2A16231C4DB19BE33B8FAB5B9B0A5C8660DDAB24</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/System.Diagnostics.Debug@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>System.Diagnostics.DiagnosticSource</name>
+      <version>4.3.0</version>
+      <description>Provides Classes that allow you to decouple code logging rich (unserializable) diagnostics/telemetry (e.g. framework) from code that consumes it (e.g. tools)
+
+Commonly Used Types:
+System.Diagnostics.DiagnosticListener
+System.Diagnostics.DiagnosticSource</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">8F54DF5FF382B6650E2E10D1043863A24BF49FF0714E779E837CD7073E46FB2635BCFCDCF99D7C4A9D95F35EBFFD86AB0CA068305F4B245072E08303B917B34D</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/System.Diagnostics.DiagnosticSource@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>System.Diagnostics.Tracing</name>
+      <version>4.3.0</version>
+      <description>Provides class that enable you to create high performance tracing events to be captured by event tracing for Windows (ETW).
+
+Commonly Used Types:
+System.Diagnostics.Tracing.EventSource
+System.Diagnostics.Tracing.EventListener
+System.Diagnostics.Tracing.EventLevel
+System.Diagnostics.Tracing.EventKeywords
+System.Diagnostics.Tracing.EventWrittenEventArgs
+System.Diagnostics.Tracing.EventAttribute
+System.Diagnostics.Tracing.EventSourceAttribute
+System.Diagnostics.Tracing.NonEventAttribute
+ 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">D0A5D30E261CD45B7DFAB02B7FFBD76B64E0C9B892ED826EA61481C983C0208B05B69981CD79E91CD4E5811E1CD4C3CEA06A1AFCE05811ECE58BE5E4C20169EA</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/System.Diagnostics.Tracing@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>System.Dynamic.Runtime</name>
+      <version>4.0.11</version>
+      <description>Provides classes and interfaces that support the Dynamic Language Runtime (DLR).
+
+Commonly Used Types:
+System.Runtime.CompilerServices.CallSite
+System.Runtime.CompilerServices.CallSite&lt;T&gt;
+System.Dynamic.IDynamicMetaObjectProvider
+System.Dynamic.DynamicMetaObject
+System.Dynamic.SetMemberBinder
+System.Dynamic.GetMemberBinder
+System.Dynamic.ExpandoObject
+System.Dynamic.DynamicObject
+System.Runtime.CompilerServices.CallSiteBinder
+System.Runtime.CompilerServices.ConditionalWeakTable&lt;TKey, TValue&gt;
+ 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">0B2189A6F50EFFAB44A8B1F883F2A1F9B9B32C448123190E8946A877C28FF46A235AA90AF0898D1CCD6DA2F3155AA2CF26E57F7F61EE7E3C50DFDE2190D781AB</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/System.Dynamic.Runtime@4.0.11</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>System.Globalization</name>
+      <version>4.3.0</version>
+      <description>Provides classes that define culture-related information, including language, country/region, calendars in use, format patterns for dates, currency, and numbers, and sort order for strings.
+
+Commonly Used Types:
+System.Globalization.DateTimeFormatInfo
+System.Globalization.CultureInfo
+System.Globalization.NumberFormatInfo
+System.Globalization.CalendarWeekRule
+System.Globalization.TextInfo
+System.Globalization.Calendar
+System.Globalization.CompareInfo
+System.Globalization.CompareOptions
+System.Globalization.UnicodeCategory
+ 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">823D2BA308CB073B40A3146ECCCD0D9FD7B1615AC3FBEFB16F73D873E411FD81C3BDC87DF206D3DC7E2F14C9CD53AAFCA684A3570C25471280AADA8DE805ECE2</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/System.Globalization@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>System.Globalization.Calendars</name>
+      <version>4.3.0</version>
+      <description>Provides classes for performing date calculations using specific calendars, including the Gregorian, Julian, Hijri and Korean calendars.
+
+Commonly Used Types:
+System.Globalization.HijriCalendar
+System.Globalization.GregorianCalendar
+System.Globalization.HebrewCalendar
+System.Globalization.KoreanCalendar
+System.Globalization.ThaiBuddhistCalendar
+System.Globalization.TaiwanCalendar
+System.Globalization.JapaneseCalendar
+System.Globalization.GregorianCalendarTypes
+System.Globalization.PersianCalendar
+System.Globalization.UmAlQuraCalendar
+ 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">E97190231402B393774B925EFC02A2BFA41D1D117A17FB87DA6E399F5234546962767E9CD8F39970EFA408E4F453CD1E6751A2A61E366BC97406E1B0B8A4BE86</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/System.Globalization.Calendars@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>System.Globalization.Extensions</name>
+      <version>4.3.0</version>
+      <description>Provides classes for performing Unicode string normalization, culture-specific string comparisons and support the use of non-ASCII characters for Internet domain names.
+
+Commonly Used Types:
+System.StringNormalizationExtensions
+System.Text.NormalizationForm
+System.Globalization.IdnMapping
+ 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">A4D360003F95E0C31EDF39C0B91E1C73850A60AC5D0032B17DB888A3C7D7134CEF9ACD97219D14174AD213B7C044F49B364CC5720073EBFCB6E1BF6E4EC24CE5</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/System.Globalization.Extensions@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>System.IO</name>
+      <version>4.3.0</version>
+      <description>Provides base input and output (I/O) types, including System.IO.Stream, System.IO.StreamReader and System.IO.StreamWriter, that allow reading and writing to data streams
+
+Commonly Used Types:
+System.IO.Stream
+System.IO.EndOfStreamException
+System.IO.MemoryStream
+System.IO.StreamReader
+System.IO.StreamWriter
+System.IO.StringWriter
+System.IO.TextWriter
+System.IO.TextReader
+ 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">BFCA5A21E3E1986B9765B13DC6FBCD6F8B89E4C1383855D1D7EF256BF1BF2F51889769DB5365859DD7606FBF6454ADD4DAEB3BAB56994FFB98FD1D03FE8BC1E6</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/System.IO@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>System.IO.FileSystem</name>
+      <version>4.3.0</version>
+      <description>Provides types that allow reading and writing to files and types that provide basic file and directory support.
+
+Commonly Used Types:
+System.IO.FileStream
+System.IO.FileInfo
+System.IO.DirectoryInfo
+System.IO.FileSystemInfo
+System.IO.File
+System.IO.Directory
+System.IO.SearchOption
+System.IO.FileOptions
+ 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">4FB581D6F85B9529A091A0E974633752AA39E50B2BE6C8A9E5ECA8C2BC225CEA07064CCEC7778F77DF9987DEEBF4DCCEC050B1A97EDAC0EE9107142E6A8EE7EE</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/System.IO.FileSystem@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>System.IO.FileSystem.Primitives</name>
+      <version>4.3.0</version>
+      <description>Provides common enumerations and exceptions for path-based I/O libraries.
+
+Commonly Used Types:
+System.IO.DirectoryNotFoundException
+System.IO.FileAccess
+System.IO.FileLoadException
+System.IO.PathTooLongException
+System.IO.FileMode
+System.IO.FileShare
+System.IO.FileAttributes
+ 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">5885953D09582CFFD973D23A21A929064D72F2BC9518AF3732D671FFFCC628A8B686F1D058A001EE6A114023B3E48B3FC0D0E4B22629A1C7F715E03795EE9EE5</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/System.IO.FileSystem.Primitives@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>System.Linq</name>
+      <version>4.3.0</version>
+      <description>Provides classes and interfaces that supports queries that use Language-Integrated Query (LINQ).
+
+Commonly Used Types:
+System.Linq.Enumerable
+System.Linq.IGrouping&lt;TKey, TElement&gt;
+System.Linq.IOrderedEnumerable&lt;TElement&gt;
+System.Linq.ILookup&lt;TKey, TElement&gt;
+System.Linq.Lookup&lt;TKey, TElement&gt;
+ 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">EACC7FE1EC526F405F5BA0E671F616D0E5BE9C1828D543A9E2F8C65DF4099D6B2EA4A9FA2CDAE4F34B170DC37142F60E267E137CA39F350281ED70D2DC620458</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/System.Linq@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>System.Linq.Expressions</name>
+      <version>4.1.0</version>
+      <description>Provides classes, interfaces and enumerations that enable language-level code expressions to be represented as objects in the form of expression trees.
+
+Commonly Used Types:
+System.Linq.Expressions.Expression&lt;TDelegate&gt;
+System.Linq.Expressions.Expression
+System.Linq.Expressions.MemberExpression
+System.Linq.Expressions.ExpressionVisitor
+System.Linq.Expressions.MethodCallExpression
+System.Linq.IQueryable&lt;T&gt;
+System.Linq.IQueryable
+System.Linq.Expressions.NewExpression
+System.Linq.Expressions.ParameterExpression
+System.Linq.Expressions.ConstantExpression
+ 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">04605A091D3AEA404BC97CB7FFC154708B3BEC886562D9E36AECD4D2ED130AFBB45F54CD16A3F714F0CCB3F27C5BC7707E55FBC3E81681A783E9396930058ACC</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/System.Linq.Expressions@4.1.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>System.Net.Http</name>
+      <version>4.3.2</version>
+      <description>Provides a programming interface for modern HTTP applications, including HTTP client components that allow applications to consume web services over HTTP and HTTP components that can be used by both clients and servers for parsing HTTP headers.
+
+Commonly Used Types:
+System.Net.Http.HttpResponseMessage
+System.Net.Http.DelegatingHandler
+System.Net.Http.HttpRequestException
+System.Net.Http.HttpClient
+System.Net.Http.MultipartContent
+System.Net.Http.Headers.HttpContentHeaders
+System.Net.Http.HttpClientHandler
+System.Net.Http.StreamContent
+System.Net.Http.FormUrlEncodedContent
+System.Net.Http.HttpMessageHandler
+ 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">E07614BBC5AE89208D6627D8636C039F6EDD1121B8DE018D392BF4120D6F76EFF04AC46CE4683DD087568C0FB201A18118104A9DECE234F79577C9A1133F36BE</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/System.Net.Http@4.3.2</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>System.Net.Primitives</name>
+      <version>4.3.0</version>
+      <description>Provides common types for network-based libraries, including System.Net.IPAddress, System.Net.IPEndPoint, and System.Net.CookieContainer.
+
+Commonly Used Types:
+System.Net.HttpStatusCode
+System.Net.Sockets.SocketError
+System.Net.Cookie
+System.Net.Sockets.SocketException
+System.Net.IPEndPoint
+System.Net.ICredentials
+System.Net.NetworkCredential
+System.Net.IPAddress
+System.Net.CookieCollection
+System.Net.CookieContainer
+ 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">9F7FDECE330A81F3312EA7C804927852413BEE2C929F3066B736993803DF47CC0692FBCA236C222BF19DC8F59B42F54F2A4C00DA9A4D624E458DA5874D127CE6</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/System.Net.Primitives@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>System.Net.Requests</name>
+      <version>4.3.0</version>
+      <description>Provides older classes (such as HttpWebRequest and HttpWebResponse) for sending HTTP requests and receiving HTTP responses from a resource identified by a URI. Developers should prefer the classes in the System.Net.Http package.
+
+Commonly Used Types:
+System.Net.HttpWebRequest
+System.Net.HttpWebResponse
+System.Net.HttpRequestHeader
+System.Net.WebException
+System.Net.WebExceptionStatus
+System.Net.WebRequest
+System.Net.WebResponse
+ 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">F00E58BB607AF232DB1A6A26941982346AAB5C180DA79638953A2B35DAB3026EACD1432064367F631A67923CBA7B4641D2B3FEF8768BFD1DCFFE4C79C6C76629</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/System.Net.Requests@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>System.Net.WebHeaderCollection</name>
+      <version>4.3.0</version>
+      <description>Contains types that represent HTTP request and response headers. This library is used with classes such as System.Net.HttpWebRequest and System.Net.HttpWebResponse and allows developers to query/edit header names/values.
+
+Commonly Used Types:
+System.Net.HttpRequestHeader
+System.Net.HttpResponseHeader
+System.Net.WebHeaderCollection
+ 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">FDA40B5E53BF3364A3BCA8CCC97D792111CAFC12606F8A84D4564664F8E7171844EE31F076EBBAE5332E56CC8AC543A161083FD9CAFDCE99B4A25843D627234F</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/System.Net.WebHeaderCollection@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>System.ObjectModel</name>
+      <version>4.0.12</version>
+      <description>Provides types and interfaces that allow the creation of observable types that provide notifications to clients when changes are made to it.
+
+Commonly Used Types:
+System.ComponentModel.INotifyPropertyChanged
+System.Collections.ObjectModel.ObservableCollection&lt;T&gt;
+System.ComponentModel.PropertyChangedEventHandler
+System.Windows.Input.ICommand
+System.Collections.Specialized.INotifyCollectionChanged
+System.Collections.Specialized.NotifyCollectionChangedEventArgs
+System.Collections.Specialized.NotifyCollectionChangedEventHandler
+System.Collections.ObjectModel.KeyedCollection&lt;TKey, TItem&gt;
+System.ComponentModel.PropertyChangedEventArgs
+System.Collections.ObjectModel.ReadOnlyDictionary&lt;TKey, TValue&gt;
+ 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">F5191CDB360BD2624ABD7454C66862540F97AA19DF92EA0854786B9D3CB9549E95C6194CFE8ADC01589203C4FEB1673A129C4929486BCB5F8DB83EA535477C53</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/System.ObjectModel@4.0.12</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>System.Private.Uri</name>
+      <version>4.3.0</version>
+      <description>Internal implementation package not meant for direct consumption.  Please do not reference directly.  Provides implementation of System.Uri. 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">5989A57EF273B689A663E961A0FE09D9B1D88438E5478358EFC4B165DE3B2674FA9579C301CE12D2D2FA5F33295F2ACB42ECEEA2EBEBF70C733DA6364CEAF94D</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/System.Private.Uri@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>System.Reflection</name>
+      <version>4.3.0</version>
+      <description>Provides types that retrieve information about assemblies, modules, members, parameters, and other entities in managed code by examining their metadata. These types also can be used to manipulate instances of loaded types, for example to hook up events or to invoke methods.
+
+Commonly Used Types:
+System.Reflection.MethodInfo
+System.Reflection.PropertyInfo
+System.Reflection.ParameterInfo
+System.Reflection.FieldInfo
+System.Reflection.ConstructorInfo
+System.Reflection.Assembly
+System.Reflection.MemberInfo
+System.Reflection.EventInfo
+System.Reflection.Module
+ 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">2325B67ED60DCE0302807064F25422CBE1B7FB275B539B44FBA3C4A8CE4926F21D78529A5C34B31C03D80D110F7BACE9AF9589D457266BEAC014220057AF8333</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/System.Reflection@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>System.Reflection.Emit</name>
+      <version>4.0.1</version>
+      <description>Provides classes that allow a compiler or tool to emit metadata and optionally generate a PE file on disk. The primary clients of these classes are script engines and compilers.
+
+Commonly Used Types:
+System.Reflection.Emit.AssemblyBuilder
+System.Reflection.Emit.FieldBuilder
+System.Reflection.Emit.TypeBuilder
+System.Reflection.Emit.MethodBuilder
+System.Reflection.Emit.ConstructorBuilder
+System.Reflection.Emit.GenericTypeParameterBuilder
+System.Reflection.Emit.ModuleBuilder
+System.Reflection.Emit.PropertyBuilder
+System.Reflection.Emit.AssemblyBuilderAccess
+System.Reflection.Emit.EventBuilder
+ 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">FF7766886B945148EA65A49E4DDC648336340DEF2C2E94B8277B584444EC9126D96918F0BCBEB62016A530623A89CCD9EAE749D62065B01058387B5D09FC7DD1</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/System.Reflection.Emit@4.0.1</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>System.Reflection.Emit.ILGeneration</name>
+      <version>4.0.1</version>
+      <description>Provides classes that allow a compiler or tool to emit Microsoft intermediate language (MSIL). The primary clients of these classes are script engines and compilers.
+
+Commonly Used Types:
+System.Reflection.Emit.ILGenerator
+System.Reflection.Emit.Label
+System.Reflection.Emit.CustomAttributeBuilder
+System.Reflection.Emit.LocalBuilder
+System.Reflection.Emit.ParameterBuilder
+System.Reflection.Emit.SignatureHelper
+ 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">C3819CD3A58F609FF579652536F9F414481CAA4D9E7DC277E0D3C8C8FE8E0FF90806FA94F7C6436D4AF853C6FCCD26D5AF57F0A49C5BACEEF4E0DAAA39E26773</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/System.Reflection.Emit.ILGeneration@4.0.1</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>System.Reflection.Emit.Lightweight</name>
+      <version>4.0.1</version>
+      <description>Provides the System.Reflection.Emit.DynamicMethod class, which represents a dynamic method that can be compiled, executed, and discarded. Discarded methods are available for garbage collection.
+
+Commonly Used Types:
+System.Reflection.Emit.DynamicMethod
+ 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">542863FA085A31705B0B294B64744C11617A098BEAE4D5664BEB53189148D19246C9A112DE30F2D597E0888069A414F2AED8E94A2B369294A81B24B991BC2149</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/System.Reflection.Emit.Lightweight@4.0.1</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>System.Reflection.Extensions</name>
+      <version>4.3.0</version>
+      <description>Provides custom attribute extension methods for System.Reflection types.
+
+Commonly Used Types:
+System.Reflection.InterfaceMapping
+System.Reflection.CustomAttributeExtensions
+System.Reflection.RuntimeReflectionExtensions
+ 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">06CFD992C8D7FD9AB6432AB02BE981A01B6558285A6E26A7825A064D4EFCCE08D9E7344F03FA19B033A2459D42B0B80E8C1400CE39B47A1752869AB8825B0475</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/System.Reflection.Extensions@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>System.Reflection.Primitives</name>
+      <version>4.3.0</version>
+      <description>Provides common enumerations for reflection-based libraries.
+
+Commonly Used Types:
+System.Reflection.FieldAttributes
+System.Reflection.Emit.OpCode
+System.Reflection.TypeAttributes
+System.Reflection.MethodAttributes
+System.Reflection.CallingConventions
+System.Reflection.PropertyAttributes
+System.Reflection.EventAttributes
+System.Reflection.ParameterAttributes
+System.Reflection.GenericParameterAttributes
+System.Reflection.MethodImplAttributes
+ 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">D4B9CC905F5A5CAB900206338E889068BF66C18EE863A29D68EFF3CDE2CCCA734112A2A851F2E2E5388A21EC28005FA19317C64D9B23923B05D6344BE2E49EAA</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/System.Reflection.Primitives@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>System.Reflection.TypeExtensions</name>
+      <version>4.4.0</version>
+      <description>Provides extensions methods for System.Type that are designed to be source-compatible with older framework reflection-based APIs.
+
+Commonly Used Types:
+System.Reflection.TypeExtensions
+System.Reflection.BindingFlags
+ 
+8321c729934c0f8be754953439b88e6e1c120c24 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">05661DAC008CCB549BABB2A1D682124BEDAA297D5D1E15CDA510721B773A33D8B67E153D059A8EDE715821A6E66D9B90C1DEECBD1E737F134782682FD9792422</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>https://github.com/dotnet/corefx/blob/master/LICENSE.TXT</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/System.Reflection.TypeExtensions@4.4.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>System.Resources.ResourceManager</name>
+      <version>4.3.0</version>
+      <description>Provides classes and attributes that allow developers to create, store, and manage various culture-specific resources used in an application.
+
+Commonly Used Types:
+System.Resources.ResourceManager
+System.Resources.NeutralResourcesLanguageAttribute
+System.Resources.SatelliteContractVersionAttribute
+System.Resources.MissingManifestResourceException
+ 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">9067DB28F1C48D08FC52AD40A608F88C14AD9112646741DDAF426FDFE68BED61AB01954B179461E61D187371600C1E6E5C36C788993F5A105A64F5702A6B81D4</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/System.Resources.ResourceManager@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>System.Runtime</name>
+      <version>4.3.0</version>
+      <description>Provides the fundamental primitives, classes and base classes that define commonly-used value and reference data types, events and event handlers, interfaces, attributes, and exceptions. This packages represents the core package, and provides the minimal set of types required to build a managed application.
+
+Commonly Used Types:
+System.Object
+System.Exception
+System.Int16
+System.Int32
+System.Int64
+System.Enum
+System.String
+System.Char
+System.Boolean
+System.SByte
+System.Byte
+System.DateTime
+System.DateTimeOffset
+System.Single
+System.Double
+System.UInt16
+System.UInt32
+System.UInt64
+System.IDisposable
+System.Uri
+ 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">92AB2249F08073CFAFDC4CFBD7DB36D651AD871B8D8BA961006982187DE374BF4A30AF93F15F73B05AF343F7A70CBD484B04D646570587636AE72171EB0714FB</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/System.Runtime@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>System.Runtime.CompilerServices.Unsafe</name>
+      <version>4.4.0</version>
+      <description>Provides the System.Runtime.CompilerServices.Unsafe class, which provides generic, low-level functionality for manipulating pointers.
+
+Commonly Used Types:
+System.Runtime.CompilerServices.Unsafe
+ 
+8321c729934c0f8be754953439b88e6e1c120c24 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">D03F39B62F48714C56AA5DB5DDDE1613E7F62633734731E611A1B7E2A880DE10FB1BC3B88B4320AFE46EB649F8A66ADBAD6F80058E2FCE910280799DC3EBD38D</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>https://github.com/dotnet/corefx/blob/master/LICENSE.TXT</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/System.Runtime.CompilerServices.Unsafe@4.4.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>System.Runtime.Extensions</name>
+      <version>4.3.0</version>
+      <description>Provides commonly-used classes for performing mathematical functions, conversions, string comparisons and querying environment information.
+
+Commonly Used Types:
+System.Math
+System.Environment
+System.Random
+System.Progress&lt;T&gt;
+System.Convert
+System.Diagnostics.Stopwatch
+System.Runtime.Versioning.FrameworkName
+System.StringComparer
+System.IO.Path
+ 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">680A32B19C2BD5026F8687AA5382AEA4F432B4F032F8BDE299FACB618C56D57369ADEF7F7CC8E60AD82AE3C12E5DD50772491363BF8044C778778628A6605BBC</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/System.Runtime.Extensions@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>System.Runtime.Handles</name>
+      <version>4.3.0</version>
+      <description>Provides base classes, including System.Runtime.InteropServices.CriticalHandle and System.Runtime.InteropServices.SafeHandle, for types that represent operating system handles.
+
+Commonly Used Types:
+System.Runtime.InteropServices.SafeHandle
+Microsoft.Win32.SafeHandles.SafeWaitHandle
+System.Runtime.InteropServices.CriticalHandle
+System.Threading.WaitHandleExtensions
+System.IO.HandleInheritability
+ 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">0A5BAF1DD554BF9E01BCB4CE082CB26EE82B783364FEB47CBA730FAEECD70EDC528EFAD0394DCCE11F37D7F9507F8608F15629EBAF051906BFD3513E46AF0F11</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/System.Runtime.Handles@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>System.Runtime.InteropServices</name>
+      <version>4.3.0</version>
+      <description>Provides types that support COM interop and platform invoke services.
+
+Commonly Used Types:
+System.Runtime.InteropServices.GCHandle
+System.Runtime.InteropServices.GuidAttribute
+System.Runtime.InteropServices.COMException
+System.DllNotFoundException
+System.Runtime.InteropServices.DllImportAttribute
+ 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">650799C3E654EFBB9AD67157C9C60CE46F288A81597BE37CE2A0BF5D4835044065EF3F65B997328CBBBBFB81F4C89B8D7E7D61380880019DEEE6EB3F963F70D9</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/System.Runtime.InteropServices@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>System.Runtime.Numerics</name>
+      <version>4.3.0</version>
+      <description>Provides the numeric types System.Numerics.BigInteger and System.Numerics.Complex, which complement the numeric primitives, such as System.Byte, System.Double and System.Int32.
+
+Commonly Used Types:
+System.Numerics.BigInteger
+System.Numerics.Complex
+ 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">3E347FAA8E7EC484D481E53B1C219FE1CE346AE8278A214B4508CF0E233C1627BD9C6C6C7C654E8C1F4143271838DDD9593F63A1043577AD87C40E392AF7FD34</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/System.Runtime.Numerics@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>System.Security.Cryptography.Algorithms</name>
+      <version>4.3.0</version>
+      <description>Provides base types for cryptographic algorithms, including hashing, encryption, and signing operations.
+
+Commonly Used Types:
+System.Security.Cryptography.Aes
+System.Security.Cryptography.RSA
+System.Security.Cryptography.RSAParameters
+System.Security.Cryptography.HMACSHA1
+System.Security.Cryptography.SHA256
+System.Security.Cryptography.SHA1
+System.Security.Cryptography.SHA512
+System.Security.Cryptography.SHA384
+System.Security.Cryptography.HMACSHA256
+System.Security.Cryptography.MD5
+System.Security.Cryptography.HMACSHA384
+System.Security.Cryptography.HMACSHA512
+ 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">7641D70C2BA6F37BF429D5D949BDA427F078098C2DCB8924FD79B23BB22C4B956EF14235422D8B1CC5720CBBCC6CFEE8943D5FF87CE7ABF0D54C5E8BCE2AA5E2</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/System.Security.Cryptography.Algorithms@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>System.Security.Cryptography.Cng</name>
+      <version>4.3.0</version>
+      <description>Provides cryptographic algorithm implementations and key management with Windows Cryptographic Next Generation API (CNG).
+
+Commonly Used Types:
+System.Security.Cryptography.RSACng
+System.Security.Cryptography.ECDsaCng
+System.Security.Cryptography.CngKey
+ 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">6272273414EAA777E78DCA1B5ECBBDF65E9659908082AEA924DF0975E71F4C1B47F85617EDF90EAD57078C29513A160CA62F123BE9F9F339DFB9C9386844F5EA</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/System.Security.Cryptography.Cng@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>System.Security.Cryptography.Csp</name>
+      <version>4.3.0</version>
+      <description>Provides cryptographic algorithm implementations and key management with Windows Cryptographic API (CryptoAPI).
+
+Commonly Used Types:
+System.Security.Cryptography.RSACryptoServiceProvider
+System.Security.Cryptography.CspParameters
+ 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">43317591747A18F52F683187E09ADFE0E03573E6DAC430BF3BA13F440CDB1C7BB1F9205369D5F3B2A0F3FDF9604D5BA1E6D94A899A25D2C533E453338578F351</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/System.Security.Cryptography.Csp@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>System.Security.Cryptography.Encoding</name>
+      <version>4.3.0</version>
+      <description>Provides types for representing Abstract Syntax Notation One (ASN.1)-encoded data.
+
+Commonly Used Types:
+System.Security.Cryptography.AsnEncodedData
+System.Security.Cryptography.Oid
+System.Security.Cryptography.OidCollection
+ 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">5C26ADD23E63542F37506F5FA1F72E8980F03743D529CD8E583D1054B8D8A579FB773FA035A00D9073DB84DB6BE4F47CAC340D1EBC6D23DD761DBDBD600075E0</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/System.Security.Cryptography.Encoding@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>System.Security.Cryptography.OpenSsl</name>
+      <version>4.3.0</version>
+      <description>Provides cryptographic algorithm implementations and key management for non-Windows systems with OpenSSL.
+
+Commonly Used Types:
+System.Security.Cryptography.RSAOpenSsl
+ 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">64530A19489730F873F8C68E6B245135EA260C02D68591880261768358D0145795132BA5EE877741822FF05DCD0C61EDCA27696EF99E8F9302A21CADF3B1329F</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/System.Security.Cryptography.OpenSsl@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>System.Security.Cryptography.Primitives</name>
+      <version>4.3.0</version>
+      <description>Provides common types for the cryptographic libraries.
+
+Commonly Used Types:
+System.Security.Cryptography.ICryptoTransform
+System.Security.Cryptography.AsymmetricAlgorithm
+System.Security.Cryptography.SymmetricAlgorithm
+System.Security.Cryptography.HashAlgorithm
+System.Security.Cryptography.KeyedHashAlgorithm
+System.Security.Cryptography.HMAC
+System.Security.Cryptography.KeySizes
+System.Security.Cryptography.CryptographicException
+System.Security.Cryptography.CipherMode
+System.Security.Cryptography.PaddingMode
+System.Security.Cryptography.CryptoStream
+System.Security.Cryptography.CryptoStreamMode
+ 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">5AD8273F998EBB9CCA2F7BD03143D3F6D57B5D560657B26D6F4E78D038010FB30C379A23A27C08730F15C9B66F4BA565A06984EC246DFC79ACF1A741B0DD4347</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/System.Security.Cryptography.Primitives@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>System.Security.Cryptography.ProtectedData</name>
+      <version>4.4.0</version>
+      <description>Provides access to Windows Data Protection Api.
+
+Commonly Used Types:
+System.Security.Cryptography.DataProtectionScope
+System.Security.Cryptography.ProtectedData
+ 
+8321c729934c0f8be754953439b88e6e1c120c24 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">5B011EC6F05DFB5EF27D8EDF712F9F04697E1C00C47C226E29E0C9A814FB0FA8FABCAC18BDF2F21AEAB6CBF326ACA3910BA99B630B61EE48E29CED663E14CBDE</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>https://github.com/dotnet/corefx/blob/master/LICENSE.TXT</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/System.Security.Cryptography.ProtectedData@4.4.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>System.Security.Cryptography.X509Certificates</name>
+      <version>4.3.0</version>
+      <description>Provides types for reading, exporting and verifying Authenticode X.509 v3 certificates. These certificates are signed with a private key that uniquely and positively identifies the holder of the certificate.
+
+Commonly Used Types:
+System.Security.Cryptography.X509Certificates.X509Certificate2
+System.Security.Cryptography.X509Certificates.X509Certificate
+System.Security.Cryptography.X509Certificates.X509ContentType
+System.Security.Cryptography.X509Certificates.StoreLocation
+System.Security.Cryptography.X509Certificates.StoreName
+System.Security.Cryptography.X509Certificates.X509FindType
+System.Security.Cryptography.X509Certificates.X509ChainStatus
+System.Security.Cryptography.X509Certificates.X509Certificate2Collection
+System.Security.Cryptography.X509Certificates.X509EnhancedKeyUsageExtension
+System.Security.Cryptography.X509Certificates.X509Chain
+ 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">318D86AB5528E2B444EC3E4B9824C1BE82BB93DB513EAB34B238E486F886C4D74310ED82C2110401FE5CD790E4D97F4A023A0B2D5C2E29952D3FD02E42734D00</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/System.Security.Cryptography.X509Certificates@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>System.Text.Encoding</name>
+      <version>4.3.0</version>
+      <description>Provides base abstract encoding classes for converting blocks of characters to and from blocks of bytes.
+
+Commonly Used Types:
+System.Text.Encoding
+System.Text.DecoderFallbackException
+System.Text.Decoder
+System.Text.EncoderFallbackException
+System.Text.Encoder
+System.Text.EncoderFallback
+System.Text.EncoderFallbackBuffer
+System.Text.DecoderFallback
+System.Text.DecoderFallbackBuffer
+System.Text.DecoderExceptionFallback
+ 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">6FF7FEEC7313A7121F795EC7D376E4B8728C17294219FAFDFD4EA078F9DF1455B4685F0B3962C3810098E95D68594A8392C0B799D36EC8284CD6FCBD4CFE2C67</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/System.Text.Encoding@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>System.Text.Encoding.Extensions</name>
+      <version>4.3.0</version>
+      <description>Provides support for specific encodings, including ASCII, UTF-7, UTF-8, UTF-16, and UTF-32.
+
+Commonly Used Types:
+System.Text.UTF8Encoding
+System.Text.UnicodeEncoding
+System.Text.ASCIIEncoding
+System.Text.UTF7Encoding
+System.Text.UTF32Encoding
+ 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">E648C5DC781E35CF00C5CC8E7E42E815B963CF8FB788E8A817F9B53E318B2B42E2F7A556E9C3C64BF2F6A2FD4615F26AB4F0D4EB713A0151E71E0AF3FE9C3EED</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/System.Text.Encoding.Extensions@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>System.Text.RegularExpressions</name>
+      <version>4.3.0</version>
+      <description>Provides the System.Text.RegularExpressions.Regex class, an implementation of a regular expression engine.
+
+Commonly Used Types:
+System.Text.RegularExpressions.Regex
+System.Text.RegularExpressions.RegexOptions
+System.Text.RegularExpressions.Match
+System.Text.RegularExpressions.Group
+System.Text.RegularExpressions.Capture
+System.Text.RegularExpressions.MatchEvaluator
+ 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">80353C148DF30D9A2C03EE10A624D91B64D7CCC3218CB966344CFA70657F0B59C867FED2AB94057F64AB281AD9318353F25C23375C00E1376B6589AE0A70AAD3</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/System.Text.RegularExpressions@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>System.Threading</name>
+      <version>4.3.0</version>
+      <description>Provides the fundamental synchronization primitives, including System.Threading.Monitor and System.Threading.Mutex, that are required when writing asynchronous code.
+
+Commonly Used Types:
+System.Threading.Monitor
+System.Threading.SynchronizationContext
+System.Threading.ManualResetEvent
+System.Threading.AutoResetEvent
+System.Threading.ThreadLocal&lt;T&gt;
+System.Threading.EventWaitHandle
+System.Threading.SemaphoreSlim
+System.Threading.Mutex
+ 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">97A2751BDCE69FAAF9C54F834A9FD5C60C7A786FAA52F420769828DBC9B5804C1F3721BA1EA945EA1D844835D909810F9E782C9A44D0FAAECCCB230C4CD95A88</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/System.Threading@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>System.Threading.Overlapped</name>
+      <version>4.3.0</version>
+      <description>Provides common types for interacting with asynchronous (or overlapped) input and output (I/O).
+
+Commonly Used Types:
+System.Threading.NativeOverlapped
+System.Threading.Overlapped
+System.Threading.IOCompletionCallback
+ 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">25612D588A18047CCC9A0B7623FD5EE05146EAF7832F8CB303563B8AE118D86F86C99CABCEAC7F19094CF7633E77CD43D5C1F6769D8A4616D975079B9FC43E44</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/System.Threading.Overlapped@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>System.Threading.Tasks</name>
+      <version>4.3.0</version>
+      <description>Provides types that simplify the work of writing concurrent and asynchronous code.
+
+Commonly Used Types:
+System.Threading.Tasks.Task&lt;TResult&gt;
+System.Runtime.CompilerServices.TaskAwaiter&lt;TResult&gt;
+System.Threading.Tasks.TaskCompletionSource&lt;TResult&gt;
+System.Threading.Tasks.Task
+System.OperationCanceledException
+System.AggregateException
+ 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">7D488FF82CB20A3B3CEF6380F2DAE5EA9F7BAA66BF75AD711AADE1E3301B25993CCF2694E33C847EA5B9BDB90FF34C46FCD8A6BA7D6F95605BA0C124ED7C5D13</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/System.Threading.Tasks@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>System.Threading.Tasks.Extensions</name>
+      <version>4.3.0</version>
+      <description>Provides additional types that simplify the work of writing concurrent and asynchronous code.
+
+Commonly Used Types:
+System.Threading.Tasks.ValueTask&lt;TResult&gt;</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">2C33900FF7F544D6DB31AD11B6BAEE1C9ECB40D5A54F51E5DD5BBBB37F4C50EE35ED481615CBF7C1DA61A31AE3333C4454BFBEEE4AE32241789E72CE3F910DB6</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/System.Threading.Tasks.Extensions@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>System.Threading.Thread</name>
+      <version>4.3.0</version>
+      <description>Provides the System.Threading.Thread class, which allows developers to create and control a thread, set its priority, and get its state.
+
+Commonly Used Types:
+System.Threading.Thread
+System.Threading.ThreadStart
+System.Threading.ParameterizedThreadStart
+ 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">CFE12B6A60E79E2F7FCA779A511153D5B0DCAE59EA1B11606F6327DBF8B3C565E2551E8ECADA558E62DD3B684B5C9D676575025048EDFBD3988FAF7F7235A5FE</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/System.Threading.Thread@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>System.Xml.ReaderWriter</name>
+      <version>4.3.0</version>
+      <description>Provides provides a fast, non-cached, forward-only way to read and write Extensible Markup Language (XML) data.
+
+Commonly Used Types:
+System.Xml.XmlNodeType
+System.Xml.XmlException
+System.Xml.XmlReader
+System.Xml.XmlWriter
+System.Xml.IXmlLineInfo
+System.Xml.XmlNameTable
+System.Xml.IXmlNamespaceResolver
+System.Xml.XmlNamespaceManager
+System.Xml.XmlQualifiedName
+ 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">991101497FBD39E43FC306CA280A465318868AFA8DB1F34BB87C266FE61F0C81A0EC34A797B236EE823BD60D1149B7592DEF96FE044ABB511858EFFFE890C2E6</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/System.Xml.ReaderWriter@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>System.Xml.XmlDocument</name>
+      <version>4.3.0</version>
+      <description>Provides an older in-memory Extensible Markup Language (XML) programming interface that enables you to modify XML documents. Developers should prefer the classes in the System.Xml.XDocument package.
+
+Commonly Used Types:
+System.Xml.XmlNode
+System.Xml.XmlElement
+System.Xml.XmlAttribute
+System.Xml.XmlDocument
+System.Xml.XmlDeclaration
+System.Xml.XmlText
+System.Xml.XmlComment
+System.Xml.XmlNodeList
+System.Xml.XmlWhitespace
+System.Xml.XmlCDataSection
+ 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">22251B3F16DE9AA06E091B24BAEA1B8C95752F0D22266FAF34E1FB76B347B23F7910CDAF567058E23D06B7079961090CA70805070A2491ADD5DA4D0271AFD133</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/System.Xml.XmlDocument@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>System.Xml.XPath</name>
+      <version>4.3.0</version>
+      <description>Provides the classes that define a cursor model for navigating and editing Extensible Markup Language (XML) information items as instances of the XQuery 1.0 and XPath 2.0 Data Model.
+
+Commonly Used Types:
+System.Xml.XPath.XPathNavigator
+System.Xml.XPath.IXPathNavigable
+System.Xml.XPath.XPathNodeType
+System.Xml.XPath.XPathNodeIterator
+System.Xml.XPath.XPathExpression
+System.Xml.XPath.XPathResultType
+System.Xml.XPath.XPathException
+System.Xml.XPath.XPathDocument
+System.Xml.XPath.XPathItem
+System.Xml.XPath.XPathNamespaceScope
+ 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">2BD0979A2020579FB32AD374B89929A272E763EE1233ED9A215408C0A1F9F82A5FDB74330C1C55A6102E0DFDB8B7B59ED25FDF6454BF3DE146152EA779F366E0</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/System.Xml.XPath@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Microsoft</publisher>
+      <name>System.Xml.XPath.XmlDocument</name>
+      <version>4.3.0</version>
+      <description>Provides extension methods that add System.Xml.XPath support to the System.Xml.XmlDocument package.
+
+Commonly Used Types:
+System.Xml.XPath.XmlDocumentExtensions
+ 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">F75B6F7C75874AB6053E8942C1662A6E9A3561AA01502437B8D67F3BFCEBD1EBF906792801326889ED7ACB094C55469766D7D27CD10BC61B46DDAAA94DFC11E3</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://go.microsoft.com/fwlink/?LinkId=329770</url>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+      <purl>pkg:nuget/System.Xml.XPath.XmlDocument@4.3.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library">
+      <publisher>Bryan Ross</publisher>
+      <name>toml-net</name>
+      <version>0.1.1.35632</version>
+      <description>C# Implementation of TOML</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">95377EEE4C770EBF8AB6D1A5F1ECC2C02015F47D0F74832D53EAA2419D2CB6D7E5CD561741A72A8FE1B4844712CB3DE4070761AEF7EE15902C54C7F6A239B483</hash>
+      </hashes>
+      <copyright>Copyright ©  2013</copyright>
+      <purl>pkg:nuget/toml-net@0.1.1.35632</purl>
+    </component>
+    <component type="library">
+      <publisher>RobVesse,kal_ahmed</publisher>
+      <name>VDS.Common</name>
+      <version>1.9.0</version>
+      <description>A library containing useful data structures like Trees, Tries, Sparse Arrays, Bloom Filters and indexing tailored dictionaries.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">37E3B164DC916DD7576A02A5F02E5792AD659591387D299503719FF9A794974D988AA63CB85223780827DB218640383E6E8A1E40E48ACEBB4C8E101F7B549060</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <url>http://opensource.org/licenses/MIT</url>
+        </license>
+      </licenses>
+      <purl>pkg:nuget/VDS.Common@1.9.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://github.com/dotnetrdf/vds-common</url>
+        </reference>
+      </externalReferences>
+    </component>
+  </components>
+</bom>
