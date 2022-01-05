@@ -1,0 +1,4 @@
+- name: CycloneDX .NET Generate SBOM
+  uses: CycloneDX/gh-dotnet-generate-sbom@v1.0.1
+  with:
+    path: ./ObsidianSailboat.csproj
